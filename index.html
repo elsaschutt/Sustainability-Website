@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sustainable Living | A Modern Home for Conscious Choices</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="home">
+  <header id="header">
+    <div class="header-main">
+      <div class="header-container">
+        <div class="header-left">A Modern Home for Conscious Choices</div>
+        <a href="index.html" class="logo">SUSTAINABLE LIVING</a>
+        <div class="header-actions">
+          <a href="#">Account</a>
+          <a href="#">Cart</a>
+          <a href="#">Search</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-main">
+      <div class="nav-container">
+        <nav>
+          <ul>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Carousel -->
+    <div class="hero-carousel">
+      <div class="hero-slide active">
+        <img src="images/greenery.jpeg" alt="Sustainable greenery">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <div class="hero-tag">Discover Conscious Living</div>
+          <h1>Uncover the Art of Sustainability</h1>
+          <p>Transform your space with eco-friendly choices that matter</p>
+          <a href="shop.html" class="btn">Shop Collection</a>
+        </div>
+      </div>
+
+      <div class="hero-slide">
+        <img src="images/treesaplings.jpeg" alt="Tree saplings">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <div class="hero-tag">Plant the Future</div>
+          <h1>Growth Through Conscious Choices</h1>
+          <p>Every purchase plants seeds for a sustainable tomorrow</p>
+          <a href="shop.html" class="btn">Explore Now</a>
+        </div>
+      </div>
+
+      <div class="carousel-controls">
+        <span class="carousel-dot active" onclick="changeSlide(0)"></span>
+        <span class="carousel-dot" onclick="changeSlide(1)"></span>
+      </div>
+    </div>
+
+    <!-- Featured Banner -->
+    <div class="featured-banner">
+      <img src="images/trees-975091.jpg" alt="Sustainable forest">
+      <div class="featured-banner-overlay"></div>
+      <div class="featured-banner-content">
+        <h2>From Earth to Home</h2>
+        <p>Sustainable living has inspired generations of conscious consumers seeking beauty and responsibility</p>
+        <a href="resources.html" class="btn">Learn More</a>
+      </div>
+    </div>
+
+    <!-- Shop by Space -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Shop by Space</h2>
+          <p>Discover sustainable products organized by room</p>
+        </div>
+
+        <div class="grid grid-4">
+          <a href="kitchen.html" class="category-card">
+            <img src="images/kitchen.jpg" alt="Kitchen">
+            <div class="category-card-overlay">
+              <div class="category-card-content">
+                <h3>Kitchen</h3>
+                <p>Sustainable essentials</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="bathroom.html" class="category-card">
+            <img src="images/bathroom sink.jpg" alt="Bathroom">
+            <div class="category-card-overlay">
+              <div class="category-card-content">
+                <h3>Bathroom</h3>
+                <p>Zero-waste care</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="bedroom.html" class="category-card">
+            <img src="images/bed.jpg" alt="Bedroom">
+            <div class="category-card-overlay">
+              <div class="category-card-content">
+                <h3>Bedroom</h3>
+                <p>Organic comfort</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="clothing.html" class="category-card">
+            <img src="images/clothes on shelf.jpg" alt="Clothing">
+            <div class="category-card-overlay">
+              <div class="category-card-content">
+                <h3>Clothing</h3>
+                <p>Ethical fashion</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Spotlight 1 -->
+    <div class="product-spotlight">
+      <div class="container">
+        <div class="spotlight-grid">
+          <div class="spotlight-content">
+            <h2>Sustainable Kitchen Essentials</h2>
+            <p>Handcrafted with care, each product brings the beauty of sustainable design to your everyday life. Our kitchen collection features reusable containers, eco-friendly cleaning supplies, and natural materials.</p>
+            <p>From plastic-free storage to compostable cleaning tools, every item is selected for its environmental impact and lasting quality.</p>
+            <a href="kitchen.html" class="btn">Shop Kitchen</a>
+          </div>
+          <img src="images/kitchen.jpg" alt="Kitchen products" class="spotlight-image">
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Spotlight 2 -->
+    <section class="section">
+      <div class="container">
+        <div class="spotlight-grid">
+          <img src="images/bathroom sink.jpg" alt="Bathroom products" class="spotlight-image">
+          <div class="spotlight-content">
+            <h2>Zero-Waste Bathroom</h2>
+            <p>Transform your daily routine with sustainable alternatives that reduce plastic waste and environmental impact. Our bathroom collection features natural ingredients and reusable options.</p>
+            <p>From bamboo toothbrushes to refillable soap dispensers, create a bathroom that's both beautiful and responsible.</p>
+            <a href="bathroom.html" class="btn">Shop Bathroom</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Brands -->
+    <section class="section" style="background: var(--color-gray-bg);">
+      <div class="container">
+        <div class="section-title">
+          <h2>Featured Brands</h2>
+          <p>Partnering with companies committed to sustainability</p>
+        </div>
+
+        <div class="grid grid-3">
+          <a href="kitchen.html" class="brand-card">
+            <img src="images/kitchen.jpg" alt="Blueland">
+            <div class="brand-card-body">
+              <div class="brand-category">CLEANING</div>
+              <h3>Blueland</h3>
+              <p>Plastic-free cleaning tablets that eliminate single-use bottles from your home</p>
+            </div>
+          </a>
+
+          <a href="clothing.html" class="brand-card">
+            <img src="images/clothes on shelf.jpg" alt="Tentree">
+            <div class="brand-card-body">
+              <div class="brand-category">FASHION</div>
+              <h3>Tentree</h3>
+              <p>Plants 10 trees for every item purchased, creating lasting environmental impact</p>
+            </div>
+          </a>
+
+          <a href="kitchen.html" class="brand-card">
+            <img src="images/kitchen.jpg" alt="Stasher">
+            <div class="brand-card-body">
+              <div class="brand-category">FOOD STORAGE</div>
+              <h3>Stasher</h3>
+              <p>Reusable silicone bags replacing single-use plastic in your kitchen</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instagram Section -->
+    <div class="instagram-section">
+      <div class="container">
+        <h2>Share your space @sustainable_living</h2>
+
+        <div class="instagram-grid">
+          <div class="instagram-item">
+            <img src="images/kitchen.jpg" alt="Instagram 1">
+          </div>
+          <div class="instagram-item">
+            <img src="images/bathroom sink.jpg" alt="Instagram 2">
+          </div>
+          <div class="instagram-item">
+            <img src="images/bed.jpg" alt="Instagram 3">
+          </div>
+          <div class="instagram-item">
+            <img src="images/clothes on shelf.jpg" alt="Instagram 4">
+          </div>
+          <div class="instagram-item">
+            <img src="images/greenery.jpeg" alt="Instagram 5">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">SUSTAINABLE LIVING</div>
+          <p>Making eco-friendly choices accessible for everyone. Our mission is to connect conscious consumers with sustainable products and resources.</p>
+          <div class="footer-contact">
+            <a href="tel:555-123-4567">Call: 555-123-4567</a>
+            <a href="mailto:info@sustainableliving.com">Email: info@sustainableliving.com</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>SHOP</h4>
+          <ul class="footer-links">
+            <li><a href="kitchen.html">Kitchen</a></li>
+            <li><a href="bathroom.html">Bathroom</a></li>
+            <li><a href="bedroom.html">Bedroom</a></li>
+            <li><a href="clothing.html">Clothing</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>RESOURCES</h4>
+          <ul class="footer-links">
+            <li><a href="resources.html">All Resources</a></li>
+            <li><a href="#">Installation Guides</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Sustainability Tips</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>COMPANY</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Sustainable Living. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="#">Pinterest</a>
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
