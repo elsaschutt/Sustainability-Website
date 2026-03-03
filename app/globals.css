@@ -1,0 +1,33 @@
+/* Global Reset and Shared Variables */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Shared colors */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray-text: #666666;
+  --color-gray-bg: #f9f9f9;
+  --color-gray-border: #e5e5e5;
+
+  /* Main theme colors */
+  --color-text: #333333;
+  --color-accent: #2d5f3f;
+  --color-accent-hover: #1f4329;
+
+  /* Category theme colors */
+  --color-blue: #4169E1;
+  --color-blue-light: #6B8EF5;
+  --color-pink: #FF69B4;
+  --color-pink-light: #FFB6D9;
+  --color-gradient-blue-pink: linear-gradient(135deg, #4169E1 0%, #FF69B4 100%);
+  --color-gradient-pink-blue: linear-gradient(135deg, #FF69B4 0%, #4169E1 100%);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
