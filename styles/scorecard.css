@@ -271,6 +271,12 @@
   margin-top: 10px;
 }
 
+.score-max {
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.6;
+}
+
 /* No Results */
 .scorecard-no-results {
   text-align: center;

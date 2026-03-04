@@ -8,7 +8,9 @@ import {
   getBrandById,
   categoryLabels,
   categoryScoreLabels,
-  tierDescriptions
+  categoryDescriptions,
+  tierDescriptions,
+  productTypeLabels
 } from '@/data/brands-ratings'
 import '@/styles/main.css'
 import '@/styles/scorecard.css'
@@ -53,11 +55,18 @@ export default function BrandDetailPage({ params }) {
 
         <div className="brand-detail-header">
           <div className="brand-detail-info">
-            <p className="brand-detail-category">{categoryLabels[brand.category] || brand.category}</p>
+            <p className="brand-detail-category">
+              {categoryLabels[brand.category] || brand.category}
+              {brand.product_type && (
+                <span style={{ marginLeft: '12px', opacity: 0.7 }}>
+                  ({productTypeLabels[brand.product_type] || brand.product_type})
+                </span>
+              )}
+            </p>
             <h1>{brand.name}</h1>
             <p className="brand-detail-description">{brand.description}</p>
           </div>
-          <ScoreDisplay score={brand.total_score} tier={brand.tier} size="large" />
+          <ScoreDisplay score={brand.total_score} tier={brand.tier} size="large" maxScore={165} />
         </div>
 
         <section className="category-scores-section">
@@ -126,10 +135,12 @@ export default function BrandDetailPage({ params }) {
 
         <section style={{ marginBottom: '40px', padding: '24px', background: 'var(--color-gray-bg)' }}>
           <p style={{ fontSize: '14px', color: 'var(--color-gray-text)', lineHeight: '1.7' }}>
-            <strong>About this rating:</strong> Brands are scored on a 100-point scale across seven categories:
-            Circular Economy (20 pts), Transparency (20 pts), Certifications (15 pts), Impact Claims (15 pts),
-            Business Model (15 pts), Social Responsibility (10 pts), and Climate Action (5 pts).
-            Tier {brand.tier} ({tierInfo.label}) indicates {tierInfo.description.toLowerCase()}.
+            <strong>About this rating:</strong> Brands are scored on a 165-point scale across eight categories:
+            Circular Economy (30 pts), Transparency & Data (35 pts), Certifications (25 pts), Climate & Renewables (25 pts),
+            Business Model (20 pts), Social Responsibility (15 pts), Impact Claims (10 pts), and Regenerative Impact (5 pts bonus).
+          </p>
+          <p style={{ fontSize: '14px', color: 'var(--color-gray-text)', lineHeight: '1.7', marginTop: '8px' }}>
+            <strong>Tier {brand.tier} ({tierInfo.label}, {tierInfo.range} pts):</strong> {tierInfo.description}.
           </p>
         </section>
       </main>

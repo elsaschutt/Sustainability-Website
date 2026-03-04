@@ -2,7 +2,7 @@
 
 import { tierDescriptions } from '@/data/brands-ratings'
 
-export default function ScoreDisplay({ score, tier, size = 'medium' }) {
+export default function ScoreDisplay({ score, tier, size = 'medium', maxScore = null }) {
   const tierInfo = tierDescriptions[tier]
 
   const sizeClasses = {
@@ -15,6 +15,9 @@ export default function ScoreDisplay({ score, tier, size = 'medium' }) {
     <div className={`score-badge ${sizeClasses[size]}`}>
       <div className="score-number" style={{ borderColor: tierInfo.color }}>
         {score}
+        {maxScore && size === 'large' && (
+          <span className="score-max">/{maxScore}</span>
+        )}
       </div>
       <div className="score-tier" style={{ backgroundColor: tierInfo.color }}>
         {tierInfo.label}
