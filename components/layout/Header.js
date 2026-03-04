@@ -20,6 +20,7 @@ export default function Header() {
           <nav>
             <ul>
               <li><Link href="/shop">Shop</Link></li>
+              <li><Link href="/scorecard">Scorecard</Link></li>
               <li><Link href="/resources">Resources</Link></li>
               <li><Link href="/about">About</Link></li>
             </ul>
