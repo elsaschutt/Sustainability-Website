@@ -5,7 +5,7 @@ import '@/styles/main.css'
 import '@/styles/scorecard.css'
 
 export const metadata = {
-  title: 'Brand Sustainability Scorecard | Sustainable Living',
+  title: 'Brand Sustainability Scorecard | The Green Swap',
   description: 'Browse and compare sustainability ratings for eco-conscious brands. Filter by tier, certifications, and category.',
 }
 

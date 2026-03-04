@@ -27,7 +27,7 @@ export async function generateMetadata({ params }) {
     return { title: 'Brand Not Found' }
   }
   return {
-    title: `${brand.name} Sustainability Scorecard | Sustainable Living`,
+    title: `${brand.name} Sustainability Scorecard | The Green Swap`,
     description: `${brand.name} scored ${brand.total_score}/165 on our sustainability rating. ${brand.description}`,
   }
 }

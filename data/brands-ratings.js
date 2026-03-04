@@ -700,36 +700,37 @@ export const productTypeLabels = {
 };
 
 // Tier descriptions (based on V7 scorecard - 165 total points)
+// Colors are more distinct: green -> teal -> gold -> orange -> red
 export const tierDescriptions = {
   1: {
     label: "Verified Leader",
     range: "145-165",
     description: "Comprehensive circular systems, full transparency, elite certifications, climate positive",
-    color: "#1a472a"
+    color: "#0d7a3e"  // Vibrant green
   },
   2: {
     label: "Certified Sustainable",
     range: "115-144",
     description: "Strong circular practices, good transparency, multiple certifications, carbon neutral minimum",
-    color: "#2d5f3f"
+    color: "#0891b2"  // Teal/Cyan
   },
   3: {
     label: "Making Progress",
     range: "85-114",
     description: "Some circularity, transparency efforts, certifications present, solid sustainability foundation",
-    color: "#4a7c59"
+    color: "#ca8a04"  // Gold/Yellow
   },
   4: {
     label: "Early Stage",
     range: "55-84",
     description: "Beginning sustainability journey, limited transparency or certifications",
-    color: "#7d8471"
+    color: "#ea580c"  // Orange
   },
   5: {
     label: "Needs Improvement",
     range: "0-54",
     description: "Minimal sustainability practices, significant room for improvement",
-    color: "#999999"
+    color: "#dc2626"  // Red
   }
 };
 

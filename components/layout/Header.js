@@ -5,8 +5,8 @@ export default function Header() {
     <header id="header">
       <div className="header-main">
         <div className="header-container">
-          <div className="header-left">A Modern Home for Conscious Choices</div>
-          <Link href="/" className="logo">SUSTAINABLE LIVING</Link>
+          <div className="header-left">We don't sell sustainability. We verify it.</div>
+          <Link href="/" className="logo">THE GREEN SWAP</Link>
           <div className="header-actions">
             <Link href="#">Account</Link>
             <Link href="#">Cart</Link>

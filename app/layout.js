@@ -8,8 +8,8 @@ const assistant = Assistant({
 })
 
 export const metadata = {
-  title: 'Sustainable Living',
-  description: 'A Modern Home for Conscious Choices - Discover eco-friendly products for sustainable living',
+  title: 'The Green Swap',
+  description: 'We don\'t sell sustainability. We verify it. - Discover eco-friendly products for sustainable living',
 }
 
 export default function RootLayout({ children }) {

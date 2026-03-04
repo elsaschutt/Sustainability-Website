@@ -6,11 +6,11 @@ export default function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div>
-            <div className="footer-logo">SUSTAINABLE LIVING</div>
-            <p>Making eco-friendly choices accessible for everyone. Our mission is to connect conscious consumers with sustainable products and resources.</p>
+            <div className="footer-logo">THE GREEN SWAP</div>
+            <p>We don't sell sustainability. We verify it. Our mission is to connect conscious consumers with verified sustainable products and resources.</p>
             <div className="footer-contact">
               <a href="tel:555-123-4567">Call: 555-123-4567</a>
-              <a href="mailto:info@sustainableliving.com">Email: info@sustainableliving.com</a>
+              <a href="mailto:info@thegreenswap.com">Email: info@thegreenswap.com</a>
             </div>
           </div>
 
@@ -46,7 +46,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; 2025 Sustainable Living. All rights reserved.</p>
+          <p>&copy; 2025 The Green Swap. All rights reserved.</p>
           <div className="footer-social">
             <a href="#">Pinterest</a>
             <a href="#">Facebook</a>
