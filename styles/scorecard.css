@@ -1,0 +1,503 @@
+/* Scorecard Page Styles */
+
+/* Layout */
+.scorecard-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+/* Filter Sidebar */
+.scorecard-filter-sidebar {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-border);
+  padding: 24px;
+  height: fit-content;
+  position: sticky;
+  top: 140px;
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-gray-border);
+}
+
+.filter-header h3 {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.clear-filters-btn {
+  background: none;
+  border: none;
+  color: var(--color-accent);
+  font-size: 12px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.clear-filters-btn:hover {
+  color: var(--color-accent-hover);
+}
+
+.filter-section {
+  margin-bottom: 24px;
+}
+
+.filter-section h4 {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  color: var(--color-gray-text);
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filter-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.filter-checkbox input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-accent);
+  cursor: pointer;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tier-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* Main Content Area */
+.scorecard-main {
+  min-width: 0;
+}
+
+.scorecard-search {
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 14px 20px;
+  font-size: 15px;
+  border: 1px solid var(--color-gray-border);
+  background: var(--color-white);
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.search-input::placeholder {
+  color: var(--color-gray-text);
+}
+
+.scorecard-results-info {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: var(--color-gray-text);
+}
+
+/* Brand Grid */
+.scorecard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+/* Brand Card */
+.scorecard-brand-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-border);
+  padding: 24px;
+  text-decoration: none;
+  color: var(--color-text);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.scorecard-brand-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.brand-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.brand-card-category {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-gray-text);
+  font-weight: 600;
+}
+
+.brand-card-name {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.brand-card-description {
+  font-size: 14px;
+  color: var(--color-gray-text);
+  line-height: 1.6;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.brand-card-certifications {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.certification-badge {
+  font-size: 11px;
+  padding: 4px 10px;
+  background: var(--color-gray-bg);
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.certification-more {
+  background: var(--color-accent);
+  color: var(--color-white);
+}
+
+.brand-card-footer {
+  padding-top: 16px;
+  border-top: 1px solid var(--color-gray-border);
+}
+
+.view-details {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-accent);
+}
+
+/* Score Badge */
+.score-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.score-number {
+  font-size: 24px;
+  font-weight: 700;
+  border: 3px solid;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.score-badge-small .score-number {
+  font-size: 18px;
+  width: 44px;
+  height: 44px;
+  border-width: 2px;
+}
+
+.score-badge-large .score-number {
+  font-size: 36px;
+  width: 80px;
+  height: 80px;
+  border-width: 4px;
+}
+
+.score-tier {
+  margin-top: 6px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 3px 8px;
+  border-radius: 10px;
+  color: var(--color-white);
+}
+
+.score-badge-small .score-tier {
+  font-size: 9px;
+  padding: 2px 6px;
+}
+
+.score-badge-large .score-tier {
+  font-size: 12px;
+  padding: 4px 12px;
+  margin-top: 10px;
+}
+
+/* No Results */
+.scorecard-no-results {
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--color-gray-bg);
+}
+
+.scorecard-no-results p {
+  font-size: 16px;
+  color: var(--color-gray-text);
+  margin-bottom: 20px;
+}
+
+/* Brand Detail Page */
+.brand-detail-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.brand-detail-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--color-gray-text);
+  text-decoration: none;
+  margin-bottom: 30px;
+  transition: color 0.2s;
+}
+
+.brand-detail-back:hover {
+  color: var(--color-accent);
+}
+
+.brand-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--color-gray-border);
+}
+
+.brand-detail-info h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.brand-detail-category {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-gray-text);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.brand-detail-description {
+  font-size: 16px;
+  color: var(--color-gray-text);
+  line-height: 1.7;
+  max-width: 600px;
+}
+
+/* Category Scores Grid */
+.category-scores-section {
+  margin-bottom: 50px;
+}
+
+.category-scores-section h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.category-scores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.category-score-card {
+  background: var(--color-gray-bg);
+  padding: 20px;
+}
+
+.category-score-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-gray-text);
+  margin-bottom: 8px;
+}
+
+.category-score-value {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.category-score-value span {
+  font-size: 14px;
+  color: var(--color-gray-text);
+  font-weight: 400;
+}
+
+.category-score-bar {
+  height: 4px;
+  background: var(--color-gray-border);
+  margin-top: 12px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.category-score-fill {
+  height: 100%;
+  background: var(--color-accent);
+  border-radius: 2px;
+}
+
+/* Key Findings */
+.key-findings-section {
+  margin-bottom: 50px;
+}
+
+.key-findings-section h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.key-findings-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.findings-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-border);
+  padding: 24px;
+}
+
+.findings-card h3 {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+
+.findings-card.strengths h3 {
+  color: #2d5f3f;
+}
+
+.findings-card.weaknesses h3 {
+  color: #b35900;
+}
+
+.findings-card.certifications h3 {
+  color: #4169E1;
+}
+
+.findings-list {
+  list-style: none;
+}
+
+.findings-list li {
+  font-size: 14px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-gray-border);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.findings-list li:last-child {
+  border-bottom: none;
+}
+
+.findings-icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .scorecard-layout {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .scorecard-filter-sidebar {
+    position: static;
+    margin-bottom: 20px;
+  }
+
+  .key-findings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-detail-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .brand-detail-page {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .scorecard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-scores-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .brand-detail-info h1 {
+    font-size: 28px;
+  }
+}
