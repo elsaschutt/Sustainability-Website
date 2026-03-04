@@ -8,9 +8,9 @@ import {
   getBrandById,
   categoryLabels,
   categoryScoreLabels,
-  categoryDescriptions,
   tierDescriptions,
-  productTypeLabels
+  productTypeLabels,
+  scorecardCriteria
 } from '@/data/brands-ratings'
 import '@/styles/main.css'
 import '@/styles/scorecard.css'
@@ -28,8 +28,78 @@ export async function generateMetadata({ params }) {
   }
   return {
     title: `${brand.name} Sustainability Scorecard | Sustainable Living`,
-    description: `${brand.name} scored ${brand.total_score}/100 on our sustainability rating. ${brand.description}`,
+    description: `${brand.name} scored ${brand.total_score}/165 on our sustainability rating. ${brand.description}`,
   }
+}
+
+function CategoryScoreCard({ categoryKey, categoryData, productType }) {
+  const criteriaInfo = scorecardCriteria[categoryKey]
+  const percentage = (categoryData.total / categoryData.max) * 100
+
+  return (
+    <div className="category-detail-card">
+      <div className="category-detail-header">
+        <div className="category-detail-title">
+          <h3>{categoryScoreLabels[categoryKey]}</h3>
+          <span className="category-priority">Priority #{criteriaInfo?.priority || ''}</span>
+        </div>
+        <div className="category-detail-score">
+          <span className="score-big">{categoryData.total}</span>
+          <span className="score-max">/{categoryData.max}</span>
+        </div>
+      </div>
+
+      <div className="category-progress-bar">
+        <div
+          className="category-progress-fill"
+          style={{ width: `${percentage}%` }}
+        />
+      </div>
+
+      {categoryData.criteria && (
+        <div className="criteria-breakdown">
+          {Object.entries(categoryData.criteria).map(([key, value]) => {
+            // Skip non-score entries like 'tier' and 'certs_held'
+            if (typeof value !== 'object' || !('score' in value)) return null
+
+            const criteriaDetail = criteriaInfo?.criteria?.find(c => c.id === key)
+            const criteriaName = criteriaDetail?.name || key.replace(/_/g, ' ')
+            const isConsumable = productType === 'consumable' && criteriaDetail?.consumable_alt
+
+            return (
+              <div key={key} className="criteria-row">
+                <div className="criteria-info">
+                  <span className="criteria-name">
+                    {isConsumable ? criteriaDetail.consumable_alt : criteriaName}
+                  </span>
+                  {value.notes && (
+                    <span className="criteria-notes">{value.notes}</span>
+                  )}
+                </div>
+                <div className="criteria-score">
+                  <span className={`score-value ${value.score === value.max ? 'full-score' : value.score === 0 ? 'zero-score' : ''}`}>
+                    {value.score}/{value.max}
+                  </span>
+                </div>
+              </div>
+            )
+          })}
+
+          {/* Handle certifications category specially */}
+          {categoryKey === 'certifications' && categoryData.criteria.tier && (
+            <div className="criteria-row">
+              <div className="criteria-info">
+                <span className="criteria-name">Certification Tier: {categoryData.criteria.tier.toUpperCase()}</span>
+                {categoryData.criteria.certs_held && (
+                  <span className="criteria-notes">{categoryData.criteria.certs_held.join(', ')}</span>
+                )}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  )
 }
 
 export default function BrandDetailPage({ params }) {
@@ -70,25 +140,18 @@ export default function BrandDetailPage({ params }) {
         </div>
 
         <section className="category-scores-section">
-          <h2>Category Breakdown</h2>
-          <div className="category-scores-grid">
-            {Object.entries(brand.category_scores).map(([key, value]) => {
-              const percentage = (value.score / value.max) * 100
-              return (
-                <div key={key} className="category-score-card">
-                  <p className="category-score-label">{categoryScoreLabels[key] || key}</p>
-                  <p className="category-score-value">
-                    {value.score} <span>/ {value.max}</span>
-                  </p>
-                  <div className="category-score-bar">
-                    <div
-                      className="category-score-fill"
-                      style={{ width: `${percentage}%` }}
-                    />
-                  </div>
-                </div>
-              )
-            })}
+          <h2>Detailed Scorecard Breakdown</h2>
+          <p className="section-subtitle">Click each category to see individual criteria scores</p>
+
+          <div className="category-details-grid">
+            {Object.entries(brand.category_scores).map(([key, value]) => (
+              <CategoryScoreCard
+                key={key}
+                categoryKey={key}
+                categoryData={value}
+                productType={brand.product_type}
+              />
+            ))}
           </div>
         </section>
 
@@ -120,7 +183,7 @@ export default function BrandDetailPage({ params }) {
             </div>
 
             <div className="findings-card certifications">
-              <h3>Certifications</h3>
+              <h3>Certifications Held</h3>
               <ul className="findings-list">
                 {brand.key_findings.certifications.map((item, index) => (
                   <li key={index}>
@@ -133,14 +196,35 @@ export default function BrandDetailPage({ params }) {
           </div>
         </section>
 
-        <section style={{ marginBottom: '40px', padding: '24px', background: 'var(--color-gray-bg)' }}>
-          <p style={{ fontSize: '14px', color: 'var(--color-gray-text)', lineHeight: '1.7' }}>
-            <strong>About this rating:</strong> Brands are scored on a 165-point scale across eight categories:
-            Circular Economy (30 pts), Transparency & Data (35 pts), Certifications (25 pts), Climate & Renewables (25 pts),
-            Business Model (20 pts), Social Responsibility (15 pts), Impact Claims (10 pts), and Regenerative Impact (5 pts bonus).
-          </p>
-          <p style={{ fontSize: '14px', color: 'var(--color-gray-text)', lineHeight: '1.7', marginTop: '8px' }}>
-            <strong>Tier {brand.tier} ({tierInfo.label}, {tierInfo.range} pts):</strong> {tierInfo.description}.
+        <section className="rating-methodology">
+          <h2>Rating Methodology</h2>
+          <div className="methodology-grid">
+            <div className="methodology-categories">
+              <h4>Scoring Categories (165 pts total)</h4>
+              <ul>
+                <li><strong>A: Circular Economy</strong> - 30 pts (Priority #1)</li>
+                <li><strong>B: Transparency & Data</strong> - 35 pts (Priority #2)</li>
+                <li><strong>C: Certifications</strong> - 25 pts (Priority #3)</li>
+                <li><strong>D: Climate & Renewables</strong> - 25 pts (Priority #4)</li>
+                <li><strong>E: Business Model</strong> - 20 pts (Priority #5)</li>
+                <li><strong>F: Social Responsibility</strong> - 15 pts (Priority #6)</li>
+                <li><strong>G: Impact Claims</strong> - 10 pts (Priority #7)</li>
+                <li><strong>H: Regenerative</strong> - 5 pts (Bonus)</li>
+              </ul>
+            </div>
+            <div className="methodology-tiers">
+              <h4>Tier Ratings</h4>
+              <ul>
+                <li><span style={{ color: tierDescriptions[1].color }}>&#9733;</span> <strong>Tier 1:</strong> 145-165 pts (Verified Leader)</li>
+                <li><span style={{ color: tierDescriptions[2].color }}>&#10003;</span> <strong>Tier 2:</strong> 115-144 pts (Certified Sustainable)</li>
+                <li><span style={{ color: tierDescriptions[3].color }}>&#9889;</span> <strong>Tier 3:</strong> 85-114 pts (Making Progress)</li>
+                <li><span style={{ color: tierDescriptions[4].color }}>&#9888;</span> <strong>Tier 4:</strong> 55-84 pts (Early Stage)</li>
+                <li><span style={{ color: tierDescriptions[5].color }}>&#10007;</span> <strong>Tier 5:</strong> 0-54 pts (Needs Improvement)</li>
+              </ul>
+            </div>
+          </div>
+          <p className="methodology-note">
+            <strong>This brand: Tier {brand.tier} ({tierInfo.label}, {tierInfo.range} pts)</strong> — {tierInfo.description}.
           </p>
         </section>
       </main>
