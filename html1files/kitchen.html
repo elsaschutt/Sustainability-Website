@@ -7,227 +7,62 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="category-style.css">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    :root {
-      --color-white: #ffffff;
-      --color-black: #0a0a0a;
-      --color-dark: #1a1a1a;
-      --color-gray: #666666;
-      --color-light-gray: #f5f5f5;
-    }
-
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      font-size: 16px;
-      line-height: 1.6;
-      color: var(--color-black);
-      background: var(--color-white);
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* Header */
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: var(--color-white);
-      border-bottom: 1px solid #e5e5e5;
-      z-index: 1000;
-      padding: 2rem 4rem;
-    }
-
-    .header-container {
-      max-width: 1800px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: var(--color-black);
-      text-decoration: none;
-      letter-spacing: -0.02em;
-    }
-
-    nav ul {
-      display: flex;
-      gap: 4rem;
-      list-style: none;
-    }
-
-    nav a {
-      color: var(--color-black);
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 400;
-      transition: opacity 0.3s ease;
-      position: relative;
-    }
-
-    nav a:hover {
-      opacity: 0.6;
-    }
-
-    .page-header {
-      margin-top: 120px;
-      padding: 8rem 5vw 6rem;
-      text-align: center;
-      background: var(--color-light-gray);
-    }
-
-    .page-header h1 {
-      font-size: 3.8rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      letter-spacing: -0.03em;
-      line-height: 1.1;
-    }
-
-    .page-header p {
-      font-size: 1.4rem;
-      color: var(--color-gray);
-      font-weight: 300;
-      max-width: 800px;
-      margin: 0 auto;
-      line-height: 1.6;
-    }
-
-    .container {
-      max-width: 1800px;
-      margin: 0 auto;
-      padding: 0 5vw;
-    }
-
-    .section {
-      padding: 8rem 0;
-    }
-
-    .brand-item {
-      padding: 6rem 0;
-      border-bottom: 1px solid #e5e5e5;
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 8rem;
-      align-items: start;
-    }
-
-    .brand-item:last-child {
-      border-bottom: none;
-    }
-
-    .brand-name {
-      font-size: 2.5rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      position: sticky;
-      top: 150px;
-    }
-
-    .brand-details {
-      max-width: 700px;
-    }
-
-    .brand-description {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      color: var(--color-gray);
-      margin-bottom: 2rem;
-      font-weight: 300;
-    }
-
-    .brand-products {
-      font-size: 1rem;
-      margin-bottom: 2rem;
-      color: var(--color-black);
-    }
-
-    .brand-products strong {
-      font-weight: 600;
-    }
-
-    .brand-prices {
-      background: var(--color-light-gray);
-      padding: 2rem;
-      border-radius: 2px;
-    }
-
-    .brand-prices h4 {
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-
-    .brand-prices ul {
-      list-style: none;
-    }
-
-    .brand-prices li {
-      padding: 0.5rem 0;
-      color: var(--color-gray);
-      font-size: 1rem;
-    }
-
-    footer {
-      background: var(--color-dark);
+    /* Kitchen page product card enhancements */
+    .brand-link {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.75rem 2rem;
+      background: var(--color-blue);
       color: var(--color-white);
-      padding: 4rem 5vw 2rem;
-      text-align: center;
-    }
-
-    footer p {
-      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      border-radius: 6px;
       font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      transition: background 0.3s ease, transform 0.2s ease;
     }
 
-    @media (max-width: 968px) {
-      .page-header h1 {
-        font-size: 2.5rem;
-      }
+    .brand-link:hover {
+      background: var(--color-blue-light);
+      transform: translateY(-2px);
+    }
 
-      .page-header p {
-        font-size: 1.1rem;
-      }
+    .brand-image {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
 
-      .brand-item {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        padding: 4rem 0;
-      }
+    .brand-certifications {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
 
-      .brand-name {
-        position: static;
-        font-size: 2rem;
-      }
-
-      header {
-        padding: 1rem 2rem;
-      }
-
-      nav ul {
-        display: none;
-      }
+    .cert-badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      background: #e8f0fe;
+      color: var(--color-blue);
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
     }
   </style>
 </head>
 <body>
   <header>
     <div class="header-container">
-      <a href="index copy 2.html" class="logo">SUSTAINABLE LIVING</a>
+      <a href="index.html" class="logo">SUSTAINABLE LIVING</a>
       <nav>
         <ul>
-          <li><a href="index copy 2.html">Home</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="resources.html">Resources</a></li>
         </ul>
@@ -237,11 +72,188 @@
 
   <div class="page-header">
     <h1>Kitchen</h1>
-    <p>Sustainable solutions for your kitchen—from reusable paper towels to plastic-free cleaning supplies</p>
+    <p>Sustainable solutions for your kitchen — from reusable paper towels to plastic-free cleaning supplies</p>
   </div>
 
   <div class="section">
     <div class="container">
+
+      <!-- Blueland -->
+      <div class="brand-item">
+        <h2 class="brand-name">Blueland</h2>
+        <div class="brand-details">
+          <img src="https://cdn.shopify.com/s/files/1/0057/9158/0227/files/Carousel_DTC_Multi_Spray_Final_2026_01.jpg?v=1769809182" alt="Blueland Multi-Surface Spray Cleaner" class="brand-image">
+          <div class="brand-certifications">
+            <span class="cert-badge">B Corp</span>
+            <span class="cert-badge">Climate Neutral</span>
+            <span class="cert-badge">C2C Platinum</span>
+            <span class="cert-badge">EPA Safer Choice</span>
+          </div>
+          <p class="brand-description">Plastic-free sustainable cleaning supplies. Replace plastic bottles with cleaning tablets for a more sustainable home. Refillable "forever bottles" with 100% microplastic-free formulas — over 1 billion single-use bottles diverted from landfills.</p>
+          <div class="brand-products">
+            <strong>Products:</strong> Cleaning tablets, dish soap, dishwasher detergent, laundry detergent, hand soap
+          </div>
+          <div class="brand-prices">
+            <h4>Price Ranges</h4>
+            <ul>
+              <li>$16 — Multisurface cleaner starter set</li>
+              <li>$18 — Dish soap starter set</li>
+              <li>$25 — Dishwasher detergent starter set</li>
+              <li>$25 — Laundry detergent starter set</li>
+            </ul>
+          </div>
+          <a href="https://www.blueland.com/" target="_blank" rel="noopener noreferrer" class="brand-link">Shop Blueland →</a>
+        </div>
+      </div>
+
+      <!-- Seventh Generation -->
+      <div class="brand-item">
+        <h2 class="brand-name">Seventh Generation</h2>
+        <div class="brand-details">
+          <img src="https://seventhgeneration.com/sites/default/files/2025-03/2024_325_product-hero-dish_b_right.png" alt="Seventh Generation Dish Products" class="brand-image">
+          <div class="brand-certifications">
+            <span class="cert-badge">B Corp</span>
+            <span class="cert-badge">EPA Safer Choice</span>
+            <span class="cert-badge">USDA Biobased</span>
+          </div>
+          <p class="brand-description">Plant-based cleaning formulas with the Climate Fingerprints framework. EPA Safer Choice certified, meaning every ingredient meets strict safety standards for people and the planet.</p>
+          <div class="brand-products">
+            <strong>Products:</strong> All-purpose cleaners, dish soap, dishwasher detergent, paper products
+          </div>
+          <div class="brand-prices">
+            <h4>Price Ranges</h4>
+            <ul>
+              <li>$4–$6 — Dish soap (various scents)</li>
+              <li>$6–$8 — All-purpose cleaner spray</li>
+              <li>$7–$10 — Dishwasher detergent packs</li>
+            </ul>
+          </div>
+          <a href="https://www.seventhgeneration.com/" target="_blank" rel="noopener noreferrer" class="brand-link">Shop Seventh Generation →</a>
+        </div>
+      </div>
+
+      <!-- Method -->
+      <div class="brand-item">
+        <h2 class="brand-name">Method</h2>
+        <div class="brand-details">
+          <img src="https://methodproducts.com/cdn/shop/files/53590_18oz_PETDish_SeaMinerals_Front_318972_onwhite__90143.1726062643.386.513_83babad7-69c3-43fc-b6c7-45b8f4167ebc.jpg" alt="Method Dish Soap Sea Minerals" class="brand-image">
+          <div class="brand-certifications">
+            <span class="cert-badge">B Corp</span>
+          </div>
+          <p class="brand-description">Plant-based kitchen cleaners in stylish, design-forward bottles. Cruelty-free formulas that make sustainable cleaning look as good as it works. Their kitchen line includes dish soap, degreaser, and dishwasher packs.</p>
+          <div class="brand-products">
+            <strong>Products:</strong> Dish soap, dishwasher packs, heavy duty degreaser, kitchen cleaners
+          </div>
+          <div class="brand-prices">
+            <h4>Price Ranges</h4>
+            <ul>
+              <li>$5 — Dish soap (18 fl oz)</li>
+              <li>$13 — Dishwasher packs (54 ct)</li>
+              <li>$6 — Heavy duty degreaser (28 fl oz)</li>
+            </ul>
+          </div>
+          <a href="https://methodproducts.com/collections/kitchen" target="_blank" rel="noopener noreferrer" class="brand-link">Shop Method Kitchen →</a>
+        </div>
+      </div>
+
+      <!-- ECOS -->
+      <div class="brand-item">
+        <h2 class="brand-name">ECOS</h2>
+        <div class="brand-details">
+          <img src="https://mlcvmo0gntjk.i.optimole.com/cb:ICH-.67306/w:400/h:400/q:90/f:best/ig:avif/https://www.ecos.com/wp-content/uploads/2023/05/1_DishSoap_Grapefruit_25oz_Front.png" alt="ECOS Dish Soap Grapefruit" class="brand-image">
+          <div class="brand-certifications">
+            <span class="cert-badge">B Corp</span>
+            <span class="cert-badge">EPA Safer Choice</span>
+          </div>
+          <p class="brand-description">Carbon neutral, water neutral, and TRUE Platinum Zero Waste certified. Plant-powered dish soaps and all-purpose cleaners made with ingredients sourced from renewable materials like coconuts.</p>
+          <div class="brand-products">
+            <strong>Products:</strong> Dish soap, dishwasher gel, all-purpose cleaners
+          </div>
+          <div class="brand-prices">
+            <h4>Price Ranges</h4>
+            <ul>
+              <li>$5 — Dish soap (25 oz)</li>
+              <li>$7 — Dishwasher gel (40 oz)</li>
+              <li>$5 — All-purpose cleaner</li>
+            </ul>
+          </div>
+          <a href="https://www.ecos.com/" target="_blank" rel="noopener noreferrer" class="brand-link">Shop ECOS →</a>
+        </div>
+      </div>
+
+      <!-- Common Good -->
+      <div class="brand-item">
+        <h2 class="brand-name">Common Good</h2>
+        <div class="brand-details">
+          <img src="https://www.commongoodandco.com/cdn/shop/files/PDPSlides-DishSoapPouch.png?v=1738963176&width=533" alt="Common Good Dish Soap Refill Pouch" class="brand-image">
+          <div class="brand-certifications">
+            <span class="cert-badge">Leaping Bunny</span>
+          </div>
+          <p class="brand-description">Refillable cleaning products with a mission to eliminate single-use plastic. Their refill station model and non-GMO ingredients make sustainable cleaning easy and affordable.</p>
+          <div class="brand-products">
+            <strong>Products:</strong> Dish soap, all-purpose cleaners, refill pouches and boxes
+          </div>
+          <div class="brand-prices">
+            <h4>Price Ranges</h4>
+            <ul>
+              <li>$20 — Dish soap refill pouch (34 fl oz)</li>
+              <li>$66 — Spring cleaning starter set</li>
+              <li>$167 — Laundry refill box (2.5 gal)</li>
+            </ul>
+          </div>
+          <a href="https://www.commongoodandco.com/" target="_blank" rel="noopener noreferrer" class="brand-link">Shop Common Good →</a>
+        </div>
+      </div>
+
+      <!-- Rebel Green -->
+      <div class="brand-item">
+        <h2 class="brand-name">Rebel Green</h2>
+        <div class="brand-details">
+          <img src="https://rebelgreen.com/cdn/shop/files/FVC16oz_2pk.jpg?v=1744139103&width=533" alt="Rebel Green Fruit and Veggie Clean" class="brand-image">
+          <div class="brand-certifications">
+            <span class="cert-badge">B Corp</span>
+            <span class="cert-badge">USDA Certified Organic</span>
+          </div>
+          <p class="brand-description">Plant-powered cleaning products including a fruit and veggie wash and all-purpose sprays. Also offers tree-free bamboo paper products for a fully sustainable kitchen.</p>
+          <div class="brand-products">
+            <strong>Products:</strong> Fruit &amp; veggie clean, all-purpose spray, kitchen cleaners
+          </div>
+          <div class="brand-prices">
+            <h4>Price Ranges</h4>
+            <ul>
+              <li>$18 — Fruit &amp; Veggie Clean 16 oz (2-pack)</li>
+              <li>$15 — All Purpose Spray 16 oz (2-pack)</li>
+            </ul>
+          </div>
+          <a href="https://rebelgreen.com/" target="_blank" rel="noopener noreferrer" class="brand-link">Shop Rebel Green →</a>
+        </div>
+      </div>
+
+      <!-- Preserve -->
+      <div class="brand-item">
+        <h2 class="brand-name">Preserve</h2>
+        <div class="brand-details">
+          <img src="https://www.preserve.eco/cdn/shop/files/Asset_1kitchen_780x.png?v=1680659922" alt="Preserve Kitchen Products" class="brand-image">
+          <div class="brand-certifications">
+            <span class="cert-badge">B Corp</span>
+          </div>
+          <p class="brand-description">Kitchen tools and tableware made from 100% recycled plastic. Their take-back program lets you send used products back to be recycled into new ones — a true closed-loop system.</p>
+          <div class="brand-products">
+            <strong>Products:</strong> Cutting boards, colanders, kitchen tools, tableware
+          </div>
+          <div class="brand-prices">
+            <h4>Price Ranges</h4>
+            <ul>
+              <li>$10–$20 — Cutting boards</li>
+              <li>$8–$12 — Kitchen tools</li>
+              <li>$5–$8 — Tableware sets</li>
+            </ul>
+          </div>
+          <a href="https://www.preserve.eco/collections/kitchen" target="_blank" rel="noopener noreferrer" class="brand-link">Shop Preserve Kitchen →</a>
+        </div>
+      </div>
+
+      <!-- Papaya Reusables (existing) -->
       <div class="brand-item">
         <h2 class="brand-name">Papaya Reusables</h2>
         <div class="brand-details">
@@ -260,26 +272,7 @@
         </div>
       </div>
 
-      <div class="brand-item">
-        <h2 class="brand-name">Blueland</h2>
-        <div class="brand-details">
-          <p class="brand-description">Plastic free sustainable cleaning supplies. Replace plastic bottles with cleaning tablets for a more sustainable home.</p>
-          <div class="brand-products">
-            <strong>Products:</strong> Cleaning tablets, dishwasher detergent, laundry detergent, toilet bowl cleaner
-          </div>
-          <div class="brand-prices">
-            <h4>Price Ranges</h4>
-            <ul>
-              <li>$16 — Multisurface cleaner starter set</li>
-              <li>$25 — Laundry detergent starter set</li>
-              <li>$18 — Dish soap starter set</li>
-              <li>$25 — Dishwasher detergent starter set</li>
-              <li>$23 — Toilet bowl cleaner starter set</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
+      <!-- Stasher (existing) -->
       <div class="brand-item">
         <h2 class="brand-name">Stasher</h2>
         <div class="brand-details">
@@ -298,6 +291,7 @@
         </div>
       </div>
 
+      <!-- Silpat (existing) -->
       <div class="brand-item">
         <h2 class="brand-name">Silpat</h2>
         <div class="brand-details">
@@ -315,6 +309,7 @@
         </div>
       </div>
 
+      <!-- OXO (existing) -->
       <div class="brand-item">
         <h2 class="brand-name">OXO</h2>
         <div class="brand-details">
@@ -330,6 +325,7 @@
           </div>
         </div>
       </div>
+
     </div>
   </div>
 
