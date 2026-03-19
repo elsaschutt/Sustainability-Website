@@ -266,6 +266,218 @@ footer p {
   font-size: 0.9rem;
 }
 
+/* Category Scroll Bar (inside each section page) */
+.cat-scroll-bar {
+  position: sticky;
+  top: 85px;
+  z-index: 100;
+  background: var(--color-white);
+  border-bottom: 1px solid #e5e5e5;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.cat-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.cat-scroll-inner {
+  display: flex;
+  gap: 0;
+  padding: 0 5vw;
+  max-width: 1800px;
+  margin: 0 auto;
+  white-space: nowrap;
+}
+
+.cat-scroll-link {
+  display: block;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: var(--color-gray-text);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.cat-scroll-link:hover {
+  color: var(--color-black);
+  border-bottom-color: var(--color-black);
+}
+
+.cat-scroll-link.active {
+  color: var(--color-black);
+  border-bottom-color: var(--color-black);
+  font-weight: 600;
+}
+
+/* ============================
+   KITCHEN THEME (Patagonia-inspired)
+   ============================ */
+
+.kitchen-theme {
+  --kitchen-bg: #2D3B2D;
+  --kitchen-bg-light: #3A4D3A;
+  --kitchen-cream: #F5F0E8;
+  --kitchen-warm: #E8DFD0;
+  --kitchen-accent: #8B9D77;
+  --kitchen-text: #1a1a1a;
+  background: var(--kitchen-cream);
+}
+
+.kitchen-theme .cat-scroll-bar {
+  background: var(--kitchen-bg);
+  border-bottom: none;
+}
+
+.kitchen-theme .cat-scroll-link {
+  color: rgba(255,255,255,0.6);
+}
+
+.kitchen-theme .cat-scroll-link:hover {
+  color: var(--color-white);
+  border-bottom-color: var(--kitchen-accent);
+}
+
+.kitchen-theme .cat-scroll-link.active {
+  color: var(--color-white);
+  border-bottom-color: var(--kitchen-accent);
+}
+
+.kitchen-hero {
+  margin-top: 120px;
+  padding: 6rem 5vw 5rem;
+  text-align: center;
+  background: var(--kitchen-bg);
+  color: var(--color-white);
+}
+
+.kitchen-hero-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--kitchen-accent);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.kitchen-hero h1 {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--color-white);
+  -webkit-text-fill-color: unset;
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+}
+
+.kitchen-hero p {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.7);
+  font-weight: 300;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+  letter-spacing: 0.3px;
+}
+
+.kitchen-section {
+  padding: 4rem 0 6rem;
+  background: var(--kitchen-cream);
+}
+
+.kitchen-theme .filter-sidebar {
+  border-right-color: #d5cec3;
+}
+
+.kitchen-theme .filter-group {
+  border-bottom-color: #d5cec3;
+}
+
+.kitchen-theme .filter-header h3 {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.kitchen-theme .filter-group h4 {
+  color: var(--kitchen-bg);
+  letter-spacing: 0.1em;
+}
+
+.kitchen-theme .filter-clear {
+  color: var(--kitchen-bg);
+}
+
+.kitchen-theme .filter-option input[type="radio"] {
+  accent-color: var(--kitchen-bg);
+}
+
+.kitchen-theme .product-card {
+  background: var(--color-white);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.kitchen-theme .product-card:hover {
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+}
+
+.kitchen-theme .product-card-image {
+  background: var(--kitchen-warm);
+}
+
+.kitchen-theme .product-card-placeholder {
+  background: linear-gradient(135deg, var(--kitchen-warm) 0%, #d5cec3 100%);
+}
+
+.kitchen-theme .product-card-placeholder span {
+  color: var(--kitchen-bg);
+}
+
+.kitchen-theme .product-card-badge {
+  background: var(--kitchen-bg);
+}
+
+.kitchen-theme .product-card-name {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.kitchen-theme .product-card-price {
+  color: var(--kitchen-bg);
+}
+
+.kitchen-theme .product-card-cta {
+  color: var(--kitchen-bg);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+.kitchen-theme .product-card:hover .product-card-cta {
+  color: var(--kitchen-accent);
+}
+
+.kitchen-theme .product-grid-count {
+  font-family: var(--font-display), Georgia, serif;
+  color: var(--kitchen-bg);
+  font-size: 0.9rem;
+}
+
 /* Category Layout with Filter Sidebar */
 .category-layout {
   display: grid;
