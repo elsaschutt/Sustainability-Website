@@ -266,10 +266,112 @@ footer p {
   font-size: 0.9rem;
 }
 
+/* Category Layout with Filter Sidebar */
+.category-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 2rem;
+}
+
+.category-main {
+  min-width: 0;
+}
+
+.product-grid-count {
+  font-size: 0.85rem;
+  color: var(--color-gray-text);
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.no-results {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--color-gray-text);
+  font-size: 1rem;
+}
+
+/* Filter Sidebar */
+.filter-sidebar {
+  position: sticky;
+  top: 150px;
+  align-self: start;
+  border-right: 1px solid #eee;
+  padding-right: 1.5rem;
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.filter-header h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.filter-clear {
+  background: none;
+  border: none;
+  color: var(--color-blue);
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0;
+  font-weight: 500;
+}
+
+.filter-clear:hover {
+  text-decoration: underline;
+}
+
+.filter-group {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.filter-group:last-child {
+  border-bottom: none;
+}
+
+.filter-group h4 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+  color: var(--color-black);
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: var(--color-gray-text);
+  transition: color 0.2s;
+}
+
+.filter-option:hover {
+  color: var(--color-black);
+}
+
+.filter-option input[type="radio"] {
+  accent-color: var(--color-blue);
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+
 /* Product Card Grid (Grove-style) */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
 
@@ -423,6 +525,31 @@ footer p {
 
   .section {
     padding: 4rem 0;
+  }
+
+  .category-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-sidebar {
+    position: static;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    padding-right: 0;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .filter-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .filter-group h4 {
+    width: 100%;
+    margin-bottom: 0.25rem;
   }
 
   .product-grid {

@@ -1,4 +1,4 @@
-import BrandItem from '@/components/shared/BrandItem'
+import CategoryPageLayout from '@/components/shared/CategoryPageLayout'
 
 export const metadata = {
   title: 'Daily Life - Sustainable Living',
@@ -8,38 +8,25 @@ export const metadata = {
 const brands = [
   {
     name: 'Pela',
-    description: 'B-corp, compostable phone case that can compost at home or industrial compost.',
-    products: 'iPhone and Android cases, screen protectors, phone grips',
-    prices: [
-      { price: '$52-65', item: 'Phone cases (Buy one get one free)' },
-    ],
+    url: 'https://pelacase.com/',
+    products: 'Compostable phone cases, screen protectors',
+    startingPrice: '$52',
+    certifications: ['B Corp'],
   },
   {
     name: 'Arbor Made',
-    description: 'Sell eco-friendly and refillable candles. Carbon neutral and plastic free on all shipping orders. 1% of profits donated.',
-    products: 'Candles',
-    prices: [
-      { price: '$78', item: 'Starter bundle' },
-      { price: '$66', item: 'Candle set' },
-    ],
+    url: 'https://arbormade.com/',
+    products: 'Eco-friendly refillable candles',
+    startingPrice: '$66',
   },
 ]
 
 export default function DailyLifePage() {
   return (
-    <main>
-      <div className="page-header">
-        <h1>Daily Life</h1>
-        <p>Sustainable products for everyday living</p>
-      </div>
-
-      <div className="section">
-        <div className="container">
-          {brands.map((brand) => (
-            <BrandItem key={brand.name} {...brand} />
-          ))}
-        </div>
-      </div>
-    </main>
+    <CategoryPageLayout
+      title="Daily Life"
+      description="Sustainable products for everyday living"
+      brands={brands}
+    />
   )
 }

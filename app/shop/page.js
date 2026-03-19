@@ -9,6 +9,17 @@ export const metadata = {
   description: 'Discover curated eco-friendly products for every room in your home',
 }
 
+const categories = [
+  { href: '/kitchen', title: 'Kitchen', emoji: '🍳' },
+  { href: '/bathroom', title: 'Bathroom', emoji: '🛁' },
+  { href: '/bedroom', title: 'Bedroom', emoji: '🛏️' },
+  { href: '/clothing', title: 'Clothing', emoji: '👗' },
+  { href: '/garden', title: 'Garden', emoji: '🌱' },
+  { href: '/furniture', title: 'Furniture', emoji: '🪑' },
+  { href: '/daily-life', title: 'Daily Life', emoji: '☀️' },
+  { href: '/waste', title: 'Waste Solutions', emoji: '♻️' },
+]
+
 export default function ShopPage() {
   return (
     <>
@@ -25,6 +36,18 @@ export default function ShopPage() {
           <div className="page-hero-content">
             <h1>Shop Sustainable</h1>
             <p>Discover curated eco-friendly products for every room in your home</p>
+          </div>
+        </div>
+
+        {/* Horizontal scrolling category bar */}
+        <div className="category-scroll-bar">
+          <div className="category-scroll-inner">
+            {categories.map((cat) => (
+              <a key={cat.href} href={cat.href} className="category-scroll-item">
+                <span className="category-scroll-emoji">{cat.emoji}</span>
+                <span className="category-scroll-label">{cat.title}</span>
+              </a>
+            ))}
           </div>
         </div>
 

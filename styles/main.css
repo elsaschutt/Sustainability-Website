@@ -640,6 +640,61 @@ footer h4 {
   color: var(--color-white);
 }
 
+/* Category Scroll Bar */
+.category-scroll-bar {
+  position: sticky;
+  top: 120px;
+  z-index: 100;
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-gray-border);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.category-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.category-scroll-inner {
+  display: flex;
+  gap: 0;
+  padding: 0 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  white-space: nowrap;
+}
+
+.category-scroll-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 20px;
+  text-decoration: none;
+  color: var(--color-gray-text);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.category-scroll-item:hover {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+}
+
+.category-scroll-emoji {
+  font-size: 16px;
+}
+
+.category-scroll-label {
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
 /* Responsive Design */
 @media (max-width: 968px) {
   .hero-content h1 {

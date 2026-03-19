@@ -1,4 +1,4 @@
-import ProductCard from '@/components/shared/ProductCard'
+import CategoryPageLayout from '@/components/shared/CategoryPageLayout'
 
 export const metadata = {
   title: 'Kitchen - Sustainable Living',
@@ -86,21 +86,10 @@ const brands = [
 
 export default function KitchenPage() {
   return (
-    <main>
-      <div className="page-header">
-        <h1>Kitchen</h1>
-        <p>Sustainable solutions for your kitchen—from reusable paper towels to plastic-free cleaning supplies</p>
-      </div>
-
-      <div className="section">
-        <div className="container">
-          <div className="product-grid">
-            {brands.map((brand) => (
-              <ProductCard key={brand.name} {...brand} />
-            ))}
-          </div>
-        </div>
-      </div>
-    </main>
+    <CategoryPageLayout
+      title="Kitchen"
+      description="Sustainable solutions for your kitchen—from reusable paper towels to plastic-free cleaning supplies"
+      brands={brands}
+    />
   )
 }
