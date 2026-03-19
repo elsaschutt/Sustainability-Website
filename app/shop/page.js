@@ -73,7 +73,7 @@ export default function ShopPage() {
               />
               <CategoryCard
                 href="/furniture"
-                image="/images/moss on tree.jpeg"
+                image="/images/sungai-chair.jpg"
                 alt="Furniture"
                 title="Furniture"
                 description="Sustainable design"
