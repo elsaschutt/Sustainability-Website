@@ -11,30 +11,24 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main>
+      <main className="home-earth">
         {/* Hero Carousel */}
         <HeroCarousel />
 
-        {/* Featured Banner */}
-        <div className="featured-banner">
-          <Image
-            src="/images/trees-975091.jpg"
-            alt="Sustainable forest"
-            fill
-            style={{ objectFit: 'cover' }}
-          />
-          <div className="featured-banner-overlay" />
-          <div className="featured-banner-content">
-            <h2>From Earth to Home</h2>
-            <p>Sustainable living has inspired generations of conscious consumers seeking beauty and responsibility</p>
-            <Link href="/resources" className="btn">Learn More</Link>
+        {/* Mission Statement */}
+        <section className="home-mission">
+          <div className="container">
+            <span className="home-tag">Our Purpose</span>
+            <h2>We don&apos;t sell sustainability.<br />We verify it.</h2>
+            <p>Every brand on The Green Swap is evaluated through our proprietary scorecard system — measuring real impact across circular economy, transparency, certifications, climate action, and social responsibility.</p>
           </div>
-        </div>
+        </section>
 
         {/* Shop by Space */}
-        <section className="section">
+        <section className="home-categories">
           <div className="container">
-            <div className="section-title">
+            <div className="home-section-header">
+              <span className="home-tag">Browse Collections</span>
               <h2>Shop by Space</h2>
               <p>Discover sustainable products organized by room</p>
             </div>
@@ -72,15 +66,15 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Product Spotlight 1 */}
-        <div className="product-spotlight">
+        {/* Spotlight: Kitchen */}
+        <section className="home-spotlight">
           <div className="container">
             <div className="spotlight-grid">
               <div className="spotlight-content">
+                <span className="home-tag">Featured</span>
                 <h2>Sustainable Kitchen Essentials</h2>
-                <p>Handcrafted with care, each product brings the beauty of sustainable design to your everyday life. Our kitchen collection features reusable containers, eco-friendly cleaning supplies, and natural materials.</p>
-                <p>From plastic-free storage to compostable cleaning tools, every item is selected for its environmental impact and lasting quality.</p>
-                <Link href="/kitchen" className="btn">Shop Kitchen</Link>
+                <p>Handcrafted with care, each product brings the beauty of sustainable design to your everyday life. From plastic-free storage to compostable cleaning tools, every item is selected for its environmental impact and lasting quality.</p>
+                <Link href="/kitchen" className="home-btn">Shop Kitchen</Link>
               </div>
               <Image
                 src="/images/kitchen.jpg"
@@ -92,10 +86,10 @@ export default function Home() {
               />
             </div>
           </div>
-        </div>
+        </section>
 
-        {/* Product Spotlight 2 */}
-        <section className="section">
+        {/* Spotlight: Bathroom */}
+        <section className="home-spotlight-alt">
           <div className="container">
             <div className="spotlight-grid">
               <Image
@@ -107,21 +101,22 @@ export default function Home() {
                 style={{ objectFit: 'cover' }}
               />
               <div className="spotlight-content">
+                <span className="home-tag">Featured</span>
                 <h2>Zero-Waste Bathroom</h2>
-                <p>Transform your daily routine with sustainable alternatives that reduce plastic waste and environmental impact. Our bathroom collection features natural ingredients and reusable options.</p>
-                <p>From bamboo toothbrushes to refillable soap dispensers, create a bathroom that&apos;s both beautiful and responsible.</p>
-                <Link href="/bathroom" className="btn">Shop Bathroom</Link>
+                <p>Transform your daily routine with sustainable alternatives that reduce plastic waste. From bamboo toothbrushes to refillable soap dispensers, create a bathroom that&apos;s both beautiful and responsible.</p>
+                <Link href="/bathroom" className="home-btn">Shop Bathroom</Link>
               </div>
             </div>
           </div>
         </section>
 
         {/* Featured Brands */}
-        <section className="section" style={{ background: 'var(--color-gray-bg)' }}>
+        <section className="home-brands">
           <div className="container">
-            <div className="section-title">
-              <h2>Featured Brands</h2>
-              <p>Partnering with companies committed to sustainability</p>
+            <div className="home-section-header">
+              <span className="home-tag">Verified Brands</span>
+              <h2>Featured Partners</h2>
+              <p>Companies committed to real, measurable sustainability</p>
             </div>
 
             <div className="grid grid-3">
@@ -153,30 +148,46 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Instagram Section */}
-        <div className="instagram-section">
+        {/* More Categories */}
+        <section className="home-more-categories">
           <div className="container">
-            <h2>Share your space @sustainable_living</h2>
+            <div className="home-section-header">
+              <span className="home-tag">Explore More</span>
+              <h2>More Spaces</h2>
+            </div>
 
-            <div className="instagram-grid">
-              <div className="instagram-item">
-                <Image src="/images/kitchen.jpg" alt="Instagram 1" width={300} height={300} style={{ objectFit: 'cover' }} />
-              </div>
-              <div className="instagram-item">
-                <Image src="/images/bathroom sink.jpg" alt="Instagram 2" width={300} height={300} style={{ objectFit: 'cover' }} />
-              </div>
-              <div className="instagram-item">
-                <Image src="/images/bed.jpg" alt="Instagram 3" width={300} height={300} style={{ objectFit: 'cover' }} />
-              </div>
-              <div className="instagram-item">
-                <Image src="/images/clothes on shelf.jpg" alt="Instagram 4" width={300} height={300} style={{ objectFit: 'cover' }} />
-              </div>
-              <div className="instagram-item">
-                <Image src="/images/greenery.jpeg" alt="Instagram 5" width={300} height={300} style={{ objectFit: 'cover' }} />
-              </div>
+            <div className="grid grid-4">
+              <CategoryCard
+                href="/garden"
+                image="/images/flower garden.jpeg"
+                alt="Garden"
+                title="Garden"
+                description="Outdoor living"
+              />
+              <CategoryCard
+                href="/furniture"
+                image="/images/sungai-chair.jpg"
+                alt="Furniture"
+                title="Furniture"
+                description="Sustainable design"
+              />
+              <CategoryCard
+                href="/daily-life"
+                image="/images/greenery.jpeg"
+                alt="Daily Life"
+                title="Daily Life"
+                description="Everyday essentials"
+              />
+              <CategoryCard
+                href="/waste"
+                image="/images/treesaplings.jpeg"
+                alt="Waste Solutions"
+                title="Waste Solutions"
+                description="Zero-waste living"
+              />
             </div>
           </div>
-        </div>
+        </section>
       </main>
       <Footer />
     </>

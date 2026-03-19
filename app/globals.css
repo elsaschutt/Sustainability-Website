@@ -15,17 +15,17 @@
   --color-gray-border: #e5e5e5;
 
   /* Main theme colors */
-  --color-text: #333333;
-  --color-accent: #2d5f3f;
-  --color-accent-hover: #1f4329;
+  --color-text: #2a2a2a;
+  --color-accent: #2D3B2D;
+  --color-accent-hover: #3A4D3A;
 
-  /* Category theme colors */
-  --color-blue: #4169E1;
-  --color-blue-light: #6B8EF5;
-  --color-pink: #FF69B4;
-  --color-pink-light: #FFB6D9;
-  --color-gradient-blue-pink: linear-gradient(135deg, #4169E1 0%, #FF69B4 100%);
-  --color-gradient-pink-blue: linear-gradient(135deg, #FF69B4 0%, #4169E1 100%);
+  /* Earth theme colors */
+  --color-blue: #2D3B2D;
+  --color-blue-light: #3A4D3A;
+  --color-pink: #8B9D77;
+  --color-pink-light: #a3b38f;
+  --color-gradient-blue-pink: linear-gradient(135deg, #2D3B2D 0%, #8B9D77 100%);
+  --color-gradient-pink-blue: linear-gradient(135deg, #8B9D77 0%, #2D3B2D 100%);
 }
 
 body {

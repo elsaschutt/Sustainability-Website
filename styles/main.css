@@ -1,7 +1,13 @@
 /* Sustainable Living - Main Pages Stylesheet */
 
 :root {
-  --font-primary: 'Assistant', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-primary: var(--font-inter), 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: var(--font-display), 'Playfair Display', Georgia, serif;
+  --earth-bg: #2D3B2D;
+  --earth-bg-light: #3A4D3A;
+  --earth-cream: #F5F0E8;
+  --earth-warm: #E8DFD0;
+  --earth-accent: #8B9D77;
 }
 
 body {
@@ -9,7 +15,7 @@ body {
   font-size: 15px;
   line-height: 1.6;
   color: var(--color-text);
-  background: var(--color-white);
+  background: var(--earth-cream);
 }
 
 /* Header Styles */
@@ -18,27 +24,39 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background: var(--color-white);
+  background: var(--earth-bg);
   z-index: 1000;
-  box-shadow: 0 1px 0 0 var(--color-gray-border);
+  box-shadow: none;
 }
 
 header .logo,
 header nav a,
 header .header-left,
 header .header-actions a {
-  color: var(--color-text) !important;
+  color: rgba(255,255,255,0.85) !important;
   text-shadow: none;
 }
 
+header .logo {
+  font-family: var(--font-heading) !important;
+  letter-spacing: 1px !important;
+  color: var(--color-white) !important;
+}
+
+header .header-left {
+  color: var(--earth-accent) !important;
+  letter-spacing: 1.5px;
+  font-size: 10px !important;
+}
+
 header .nav-main {
-  background: var(--color-white);
-  border-top: none;
+  background: var(--earth-bg);
+  border-top: 1px solid rgba(255,255,255,0.1);
 }
 
 header .header-actions a:hover,
 header nav a:hover {
-  color: var(--color-accent) !important;
+  color: var(--color-white) !important;
 }
 
 /* All pages need padding for fixed header */
@@ -166,12 +184,13 @@ nav > ul > li > a {
 }
 
 .hero-content h1 {
+  font-family: var(--font-heading);
   font-size: 56px;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.1;
   margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  text-transform: none;
+  letter-spacing: -0.02em;
 }
 
 .hero-content p {
@@ -217,11 +236,12 @@ nav > ul > li > a {
 }
 
 .page-hero-content h1 {
+  font-family: var(--font-heading);
   font-size: 48px;
   font-weight: 700;
   margin-bottom: 16px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  text-transform: none;
+  letter-spacing: -0.02em;
 }
 
 .page-hero-content p {
@@ -234,19 +254,19 @@ nav > ul > li > a {
   display: inline-block;
   padding: 14px 36px;
   background: var(--color-white);
-  color: var(--color-black);
+  color: var(--earth-bg);
   text-decoration: none;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
   transition: all 0.3s;
   border: none;
   cursor: pointer;
 }
 
 .btn:hover {
-  background: var(--color-accent);
+  background: var(--earth-accent);
   color: var(--color-white);
 }
 
@@ -295,11 +315,12 @@ nav > ul > li > a {
 }
 
 .section-title h2 {
+  font-family: var(--font-heading);
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 12px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  text-transform: none;
+  letter-spacing: -0.02em;
 }
 
 .section-title p {
@@ -364,11 +385,12 @@ nav > ul > li > a {
 }
 
 .featured-banner-content h2 {
+  font-family: var(--font-heading);
   font-size: 42px;
   font-weight: 700;
   margin-bottom: 16px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  text-transform: none;
+  letter-spacing: -0.02em;
 }
 
 .featured-banner-content p {
@@ -414,11 +436,12 @@ nav > ul > li > a {
 }
 
 .category-card-content h3 {
+  font-family: var(--font-heading);
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 4px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  text-transform: none;
+  letter-spacing: 0;
 }
 
 .category-card-content p {
@@ -440,11 +463,12 @@ nav > ul > li > a {
 }
 
 .spotlight-content h2 {
+  font-family: var(--font-heading);
   font-size: 38px;
   font-weight: 700;
   margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  text-transform: none;
+  letter-spacing: -0.02em;
 }
 
 .spotlight-content p {
@@ -495,6 +519,7 @@ nav > ul > li > a {
 }
 
 .brand-card h3 {
+  font-family: var(--font-heading);
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 8px;
@@ -514,11 +539,12 @@ nav > ul > li > a {
 }
 
 .instagram-section h2 {
+  font-family: var(--font-heading);
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 40px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  text-transform: none;
+  letter-spacing: -0.01em;
 }
 
 .instagram-grid {
@@ -546,7 +572,7 @@ nav > ul > li > a {
 
 /* Footer */
 footer {
-  background: var(--color-black);
+  background: var(--earth-bg);
   color: var(--color-white);
   padding: 60px 0 30px;
 }
@@ -559,10 +585,11 @@ footer {
 }
 
 .footer-logo {
+  font-family: var(--font-heading);
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 16px;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
 
 footer p {
@@ -638,6 +665,167 @@ footer h4 {
 
 .footer-social a:hover {
   color: var(--color-white);
+}
+
+/* ============================
+   HOME PAGE EARTH THEME
+   ============================ */
+
+.home-earth {
+  background: var(--earth-cream);
+}
+
+/* Tag labels */
+.home-tag {
+  display: inline-block;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--earth-accent);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Mission section */
+.home-mission {
+  padding: 6rem 0;
+  text-align: center;
+  background: var(--earth-bg);
+  color: var(--color-white);
+}
+
+.home-mission h2 {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  color: var(--color-white);
+}
+
+.home-mission p {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.7);
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+/* Section headers */
+.home-section-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.home-section-header h2 {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+  color: var(--earth-bg);
+}
+
+.home-section-header p {
+  font-size: 1rem;
+  color: var(--color-gray-text);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Category sections */
+.home-categories {
+  padding: 5rem 0;
+  background: var(--earth-cream);
+}
+
+.home-more-categories {
+  padding: 5rem 0;
+  background: var(--earth-cream);
+}
+
+/* Spotlights */
+.home-spotlight {
+  padding: 5rem 0;
+  background: var(--earth-warm);
+}
+
+.home-spotlight-alt {
+  padding: 5rem 0;
+  background: var(--earth-cream);
+}
+
+.home-spotlight .spotlight-content h2,
+.home-spotlight-alt .spotlight-content h2 {
+  color: var(--earth-bg);
+}
+
+.home-spotlight .home-tag,
+.home-spotlight-alt .home-tag {
+  color: var(--earth-bg-light);
+}
+
+/* Home button */
+.home-btn {
+  display: inline-block;
+  padding: 14px 36px;
+  background: var(--earth-bg);
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.home-btn:hover {
+  background: var(--earth-bg-light);
+}
+
+/* Featured brands */
+.home-brands {
+  padding: 5rem 0;
+  background: var(--earth-bg);
+}
+
+.home-brands .home-section-header h2 {
+  color: var(--color-white);
+}
+
+.home-brands .home-section-header p {
+  color: rgba(255,255,255,0.6);
+}
+
+.home-brands .home-tag {
+  color: var(--earth-accent);
+}
+
+.home-brands .brand-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.home-brands .brand-card:hover {
+  background: rgba(255,255,255,0.12);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+
+.home-brands .brand-card h3 {
+  color: var(--color-white);
+}
+
+.home-brands .brand-card p {
+  color: rgba(255,255,255,0.6);
+}
+
+.home-brands .brand-category {
+  color: var(--earth-accent);
 }
 
 /* Responsive Design */
