@@ -90,7 +90,6 @@ export default function KitchenPage() {
       title="Kitchen"
       description="Sustainable solutions for your kitchen—from reusable paper towels to plastic-free cleaning supplies"
       brands={brands}
-      theme="kitchen"
     />
   )
 }

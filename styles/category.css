@@ -320,54 +320,54 @@ footer p {
    KITCHEN THEME (Patagonia-inspired)
    ============================ */
 
-.kitchen-theme {
-  --kitchen-bg: #2D3B2D;
-  --kitchen-bg-light: #3A4D3A;
-  --kitchen-cream: #F5F0E8;
-  --kitchen-warm: #E8DFD0;
-  --kitchen-accent: #8B9D77;
-  --kitchen-text: #1a1a1a;
-  background: var(--kitchen-cream);
+.earth-theme {
+  --earth-bg: #2D3B2D;
+  --earth-bg-light: #3A4D3A;
+  --earth-cream: #F5F0E8;
+  --earth-warm: #E8DFD0;
+  --earth-accent: #8B9D77;
+  --earth-text: #1a1a1a;
+  background: var(--earth-cream);
 }
 
-.kitchen-theme .cat-scroll-bar {
-  background: var(--kitchen-bg);
+.earth-theme .cat-scroll-bar {
+  background: var(--earth-bg);
   border-bottom: none;
 }
 
-.kitchen-theme .cat-scroll-link {
+.earth-theme .cat-scroll-link {
   color: rgba(255,255,255,0.6);
 }
 
-.kitchen-theme .cat-scroll-link:hover {
+.earth-theme .cat-scroll-link:hover {
   color: var(--color-white);
-  border-bottom-color: var(--kitchen-accent);
+  border-bottom-color: var(--earth-accent);
 }
 
-.kitchen-theme .cat-scroll-link.active {
+.earth-theme .cat-scroll-link.active {
   color: var(--color-white);
-  border-bottom-color: var(--kitchen-accent);
+  border-bottom-color: var(--earth-accent);
 }
 
-.kitchen-hero {
+.earth-hero {
   margin-top: 120px;
   padding: 6rem 5vw 5rem;
   text-align: center;
-  background: var(--kitchen-bg);
+  background: var(--earth-bg);
   color: var(--color-white);
 }
 
-.kitchen-hero-tag {
+.earth-hero-tag {
   display: inline-block;
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: var(--kitchen-accent);
+  color: var(--earth-accent);
   margin-bottom: 1.5rem;
   font-weight: 500;
 }
 
-.kitchen-hero h1 {
+.earth-hero h1 {
   font-family: var(--font-display), Georgia, serif;
   font-size: 4.5rem;
   font-weight: 700;
@@ -381,7 +381,7 @@ footer p {
   background-clip: unset;
 }
 
-.kitchen-hero p {
+.earth-hero p {
   font-size: 1.15rem;
   color: rgba(255,255,255,0.7);
   font-weight: 300;
@@ -391,90 +391,90 @@ footer p {
   letter-spacing: 0.3px;
 }
 
-.kitchen-section {
+.earth-section {
   padding: 4rem 0 6rem;
-  background: var(--kitchen-cream);
+  background: var(--earth-cream);
 }
 
-.kitchen-theme .filter-sidebar {
+.earth-theme .filter-sidebar {
   border-right-color: #d5cec3;
 }
 
-.kitchen-theme .filter-group {
+.earth-theme .filter-group {
   border-bottom-color: #d5cec3;
 }
 
-.kitchen-theme .filter-header h3 {
+.earth-theme .filter-header h3 {
   font-family: var(--font-display), Georgia, serif;
   font-size: 1.1rem;
   font-weight: 600;
 }
 
-.kitchen-theme .filter-group h4 {
-  color: var(--kitchen-bg);
+.earth-theme .filter-group h4 {
+  color: var(--earth-bg);
   letter-spacing: 0.1em;
 }
 
-.kitchen-theme .filter-clear {
-  color: var(--kitchen-bg);
+.earth-theme .filter-clear {
+  color: var(--earth-bg);
 }
 
-.kitchen-theme .filter-option input[type="radio"] {
-  accent-color: var(--kitchen-bg);
+.earth-theme .filter-option input[type="radio"] {
+  accent-color: var(--earth-bg);
 }
 
-.kitchen-theme .product-card {
+.earth-theme .product-card {
   background: var(--color-white);
   border: none;
   border-radius: 8px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.06);
 }
 
-.kitchen-theme .product-card:hover {
+.earth-theme .product-card:hover {
   box-shadow: 0 12px 40px rgba(0,0,0,0.12);
 }
 
-.kitchen-theme .product-card-image {
-  background: var(--kitchen-warm);
+.earth-theme .product-card-image {
+  background: var(--earth-warm);
 }
 
-.kitchen-theme .product-card-placeholder {
-  background: linear-gradient(135deg, var(--kitchen-warm) 0%, #d5cec3 100%);
+.earth-theme .product-card-placeholder {
+  background: linear-gradient(135deg, var(--earth-warm) 0%, #d5cec3 100%);
 }
 
-.kitchen-theme .product-card-placeholder span {
-  color: var(--kitchen-bg);
+.earth-theme .product-card-placeholder span {
+  color: var(--earth-bg);
 }
 
-.kitchen-theme .product-card-badge {
-  background: var(--kitchen-bg);
+.earth-theme .product-card-badge {
+  background: var(--earth-bg);
 }
 
-.kitchen-theme .product-card-name {
+.earth-theme .product-card-name {
   font-family: var(--font-display), Georgia, serif;
   font-size: 1.1rem;
   font-weight: 600;
 }
 
-.kitchen-theme .product-card-price {
-  color: var(--kitchen-bg);
+.earth-theme .product-card-price {
+  color: var(--earth-bg);
 }
 
-.kitchen-theme .product-card-cta {
-  color: var(--kitchen-bg);
+.earth-theme .product-card-cta {
+  color: var(--earth-bg);
   font-weight: 600;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   font-size: 0.7rem;
 }
 
-.kitchen-theme .product-card:hover .product-card-cta {
-  color: var(--kitchen-accent);
+.earth-theme .product-card:hover .product-card-cta {
+  color: var(--earth-accent);
 }
 
-.kitchen-theme .product-grid-count {
+.earth-theme .product-grid-count {
   font-family: var(--font-display), Georgia, serif;
-  color: var(--kitchen-bg);
+  color: var(--earth-bg);
   font-size: 0.9rem;
 }
 

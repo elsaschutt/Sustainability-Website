@@ -15,13 +15,11 @@ const categories = [
   { href: '/waste', title: 'Waste Solutions' },
 ]
 
-export default function CategoryPageLayout({ title, description, brands, theme }) {
+export default function CategoryPageLayout({ title, description, brands }) {
   const [filteredBrands, setFilteredBrands] = useState(brands)
 
-  const isKitchen = theme === 'kitchen'
-
   return (
-    <main className={isKitchen ? 'kitchen-theme' : ''}>
+    <main className="earth-theme">
       {/* Category scroll bar */}
       <div className="cat-scroll-bar">
         <div className="cat-scroll-inner">
@@ -37,22 +35,13 @@ export default function CategoryPageLayout({ title, description, brands, theme }
         </div>
       </div>
 
-      <div className={isKitchen ? 'kitchen-hero' : 'page-header'}>
-        {isKitchen ? (
-          <>
-            <span className="kitchen-hero-tag">Explore Our Collection</span>
-            <h1>{title}</h1>
-            <p>{description}</p>
-          </>
-        ) : (
-          <>
-            <h1>{title}</h1>
-            <p>{description}</p>
-          </>
-        )}
+      <div className="earth-hero">
+        <span className="earth-hero-tag">Explore Our Collection</span>
+        <h1>{title}</h1>
+        <p>{description}</p>
       </div>
 
-      <div className={isKitchen ? 'kitchen-section' : 'section'}>
+      <div className="earth-section">
         <div className="container">
           <div className="category-layout">
             <FilterSidebar brands={brands} onFilter={setFilteredBrands} />
@@ -62,7 +51,7 @@ export default function CategoryPageLayout({ title, description, brands, theme }
               </div>
               <div className="product-grid">
                 {filteredBrands.map((brand) => (
-                  <ProductCard key={brand.name} {...brand} theme={theme} />
+                  <ProductCard key={brand.name} {...brand} />
                 ))}
               </div>
               {filteredBrands.length === 0 && (
