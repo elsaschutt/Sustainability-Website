@@ -478,6 +478,242 @@ footer p {
   font-size: 0.9rem;
 }
 
+/* Hero title link (clickable, visible on all themes) */
+.hero-title-link {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.hero-title-link:hover,
+.hero-title-link:focus {
+  opacity: 0.85;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.hero-title-link:visited,
+.hero-title-link:active {
+  color: inherit;
+}
+
+/* Tier badge on product cards */
+.product-card-tier {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--earth-bg);
+  background: var(--earth-warm);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.6rem;
+  align-self: flex-start;
+}
+
+/* ============================
+   NAVY THEME (Bathroom)
+   ============================ */
+
+.navy-theme {
+  --navy-bg: #0F1F3D;
+  --navy-bg-light: #1E3060;
+  --navy-cream: #F0F4FA;
+  --navy-warm: #DCE5F2;
+  --navy-accent: #6B8FC4;
+  --navy-accent-light: #A8C0E0;
+  --navy-text: #0F1F3D;
+  background: var(--navy-cream);
+}
+
+.navy-theme .cat-scroll-bar {
+  background: var(--navy-bg);
+  border-bottom: none;
+}
+
+.navy-theme .cat-scroll-link {
+  color: rgba(255,255,255,0.6);
+}
+
+.navy-theme .cat-scroll-link:hover {
+  color: var(--color-white);
+  border-bottom-color: var(--navy-accent);
+}
+
+.navy-theme .cat-scroll-link.active {
+  color: var(--color-white);
+  border-bottom-color: var(--navy-accent);
+}
+
+.navy-hero {
+  margin-top: 120px;
+  padding: 6rem 5vw 5rem;
+  text-align: center;
+  background: var(--navy-bg);
+  color: var(--color-white);
+}
+
+.navy-hero-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--navy-accent-light);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.navy-hero h1 {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--color-white);
+  -webkit-text-fill-color: unset;
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+}
+
+/* Bug fix: title was white/invisible. Now properly white on dark navy
+   AND wrapped in a link so it's clickable */
+.navy-hero h1 .hero-title-link {
+  color: var(--color-white);
+}
+
+.navy-hero h1 .hero-title-link:hover {
+  color: var(--navy-accent-light);
+}
+
+.navy-hero p {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.75);
+  font-weight: 300;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+  letter-spacing: 0.3px;
+}
+
+.navy-section {
+  padding: 4rem 0 6rem;
+  background: var(--navy-cream);
+}
+
+.navy-theme .filter-sidebar {
+  border-right-color: #c5d2e5;
+}
+
+.navy-theme .filter-group {
+  border-bottom-color: #c5d2e5;
+}
+
+.navy-theme .filter-header h3 {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--navy-bg);
+}
+
+.navy-theme .filter-group h4 {
+  color: var(--navy-bg);
+  letter-spacing: 0.1em;
+}
+
+.navy-theme .filter-clear {
+  color: var(--navy-bg);
+}
+
+.navy-theme .filter-clear:hover {
+  color: var(--navy-bg-light);
+}
+
+.navy-theme .filter-option {
+  color: #4a5a72;
+}
+
+.navy-theme .filter-option:hover {
+  color: var(--navy-bg);
+}
+
+.navy-theme .filter-option input[type="radio"] {
+  accent-color: var(--navy-bg);
+}
+
+.navy-theme .product-card {
+  background: var(--color-white);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(15,31,61,0.08);
+}
+
+.navy-theme .product-card:hover {
+  box-shadow: 0 12px 40px rgba(15,31,61,0.18);
+}
+
+.navy-theme .product-card-image {
+  background: var(--navy-warm);
+}
+
+.navy-theme .product-card-placeholder {
+  background: linear-gradient(135deg, var(--navy-warm) 0%, #c5d2e5 100%);
+}
+
+.navy-theme .product-card-placeholder span {
+  color: var(--navy-bg);
+}
+
+.navy-theme .product-card-badge {
+  background: var(--navy-bg);
+  color: var(--color-white);
+}
+
+.navy-theme .product-card-name {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--navy-bg);
+}
+
+.navy-theme .product-card-tier {
+  background: var(--navy-warm);
+  color: var(--navy-bg);
+}
+
+.navy-theme .product-card-products {
+  color: #4a5a72;
+}
+
+.navy-theme .product-card-price {
+  color: var(--navy-bg);
+}
+
+.navy-theme .product-card-cta {
+  color: var(--navy-bg);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+.navy-theme .product-card:hover .product-card-cta {
+  color: var(--navy-accent);
+}
+
+.navy-theme .product-grid-count {
+  font-family: var(--font-display), Georgia, serif;
+  color: var(--navy-bg);
+  font-size: 0.9rem;
+}
+
+.navy-theme .no-results {
+  color: #4a5a72;
+}
+
 /* Category Layout with Filter Sidebar */
 .category-layout {
   display: grid;

@@ -1,4 +1,4 @@
-export default function ProductCard({ name, url, imageUrl, imageAlt, certifications, description, products, startingPrice }) {
+export default function ProductCard({ name, url, imageUrl, imageAlt, certifications, description, products, startingPrice, tier }) {
   return (
     <a
       href={url || '#'}
@@ -27,6 +27,7 @@ export default function ProductCard({ name, url, imageUrl, imageAlt, certificati
       </div>
       <div className="product-card-info">
         <h3 className="product-card-name">{name}</h3>
+        {tier && <span className="product-card-tier">{tier}</span>}
         <p className="product-card-products">{products}</p>
         {startingPrice && (
           <p className="product-card-price">Starting at {startingPrice}</p>

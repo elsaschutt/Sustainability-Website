@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import ProductCard from './ProductCard'
 import FilterSidebar from './FilterSidebar'
 
@@ -15,11 +16,19 @@ const categories = [
   { href: '/waste', title: 'Waste Solutions' },
 ]
 
-export default function CategoryPageLayout({ title, description, brands }) {
+export default function CategoryPageLayout({ title, description, brands, theme }) {
   const [filteredBrands, setFilteredBrands] = useState(brands)
 
+  const themeClass = theme === 'navy' ? 'navy-theme' : 'earth-theme'
+  const heroClass = theme === 'navy' ? 'navy-hero' : 'earth-hero'
+  const sectionClass = theme === 'navy' ? 'navy-section' : 'earth-section'
+  const tagClass = theme === 'navy' ? 'navy-hero-tag' : 'earth-hero-tag'
+
+  // Build the page link (e.g., "Bathroom" -> "/bathroom")
+  const pageHref = '/' + title.toLowerCase().replace(/\s+/g, '-')
+
   return (
-    <main className="earth-theme">
+    <main className={themeClass}>
       {/* Category scroll bar */}
       <div className="cat-scroll-bar">
         <div className="cat-scroll-inner">
@@ -35,13 +44,15 @@ export default function CategoryPageLayout({ title, description, brands }) {
         </div>
       </div>
 
-      <div className="earth-hero">
-        <span className="earth-hero-tag">Explore Our Collection</span>
-        <h1>{title}</h1>
+      <div className={heroClass}>
+        <span className={tagClass}>Explore Our Collection</span>
+        <h1>
+          <Link href={pageHref} className="hero-title-link">{title}</Link>
+        </h1>
         <p>{description}</p>
       </div>
 
-      <div className="earth-section">
+      <div className={sectionClass}>
         <div className="container">
           <div className="category-layout">
             <FilterSidebar brands={brands} onFilter={setFilteredBrands} />
