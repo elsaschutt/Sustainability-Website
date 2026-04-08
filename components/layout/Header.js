@@ -6,19 +6,8 @@ export default function Header() {
     <header id="header">
       <div className="header-main">
         <div className="header-container">
-          <div className="header-left">We don't sell sustainability. We verify it.</div>
           <Link href="/" className="logo">THE GREEN SWAP</Link>
-          <div className="header-actions">
-            <Link href="#">Account</Link>
-            <Link href="#">Cart</Link>
-            <Link href="#">Search</Link>
-          </div>
-        </div>
-      </div>
-
-      <div className="nav-main">
-        <div className="nav-container">
-          <nav>
+          <nav className="primary-nav">
             <ul>
               <ShopMegaMenu />
               <li><Link href="/scorecard">Scorecard</Link></li>

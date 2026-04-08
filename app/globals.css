@@ -1,5 +1,13 @@
 /* Global Reset and Shared Variables */
 
+@font-face {
+  font-family: 'Milker';
+  src: url('/fonts/Milker.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -29,5 +37,13 @@
 }
 
 body {
+  font-family: 'Milker', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Global font inheritance — Milker applies everywhere */
+h1, h2, h3, h4, h5, h6,
+p, a, span, li, button, input, textarea, select,
+nav, header, footer, main, section, article, aside {
+  font-family: 'Milker', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
