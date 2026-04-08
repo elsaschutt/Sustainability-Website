@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import ShopMegaMenu from './ShopMegaMenu'
 
 export default function Header() {
   return (
@@ -19,7 +20,7 @@ export default function Header() {
         <div className="nav-container">
           <nav>
             <ul>
-              <li><Link href="/shop">Shop</Link></li>
+              <ShopMegaMenu />
               <li><Link href="/scorecard">Scorecard</Link></li>
               <li><Link href="/resources">Resources</Link></li>
               <li><Link href="/about">About</Link></li>
