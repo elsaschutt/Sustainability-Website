@@ -1,4 +1,4 @@
-import { Manrope, Urbanist } from 'next/font/google'
+import { Manrope, Saira } from 'next/font/google'
 import './globals.css'
 
 const manrope = Manrope({
@@ -7,10 +7,10 @@ const manrope = Manrope({
   variable: '--font-manrope',
 })
 
-const urbanist = Urbanist({
+const saira = Saira({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-urbanist',
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-saira',
 })
 
 export const metadata = {
@@ -20,7 +20,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${manrope.variable} ${urbanist.variable}`}>
+    <html lang="en" className={`${manrope.variable} ${saira.variable}`}>
       <body>{children}</body>
     </html>
   )
