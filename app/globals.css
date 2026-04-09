@@ -17,10 +17,11 @@
 :root {
   /* Shared colors */
   --color-white: #ffffff;
+  --color-bg: #F5F0E8;
   --color-black: #000000;
   --color-gray-text: #666666;
-  --color-gray-bg: #f9f9f9;
-  --color-gray-border: #e5e5e5;
+  --color-gray-bg: #F5F0E8;
+  --color-gray-border: #e8e0d2;
 
   /* Main theme colors */
   --color-text: #2a2a2a;

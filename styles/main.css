@@ -232,7 +232,7 @@ body {
 .btn {
   display: inline-block;
   padding: 14px 36px;
-  background: var(--color-white);
+  background: var(--color-bg);
   color: var(--earth-bg);
   text-decoration: none;
   font-weight: 600;
@@ -270,7 +270,7 @@ body {
 }
 
 .carousel-dot.active {
-  background: var(--color-white);
+  background: var(--color-bg);
 }
 
 /* Layout */
@@ -465,7 +465,7 @@ body {
 
 /* Brand Cards */
 .brand-card {
-  background: var(--color-white);
+  background: var(--color-bg);
   text-decoration: none;
   color: var(--color-text);
   display: block;
