@@ -1,13 +1,14 @@
+import '@/styles/main.css'
 import '@/styles/category.css'
-import CategoryHeader from '@/components/layout/CategoryHeader'
-import CategoryFooter from '@/components/layout/CategoryFooter'
+import Header from '@/components/layout/Header'
+import Footer from '@/components/layout/Footer'
 
 export default function CategoryLayout({ children }) {
   return (
-    <div>
-      <CategoryHeader />
+    <div className="category-page">
+      <Header />
       {children}
-      <CategoryFooter />
+      <Footer />
     </div>
   )
 }

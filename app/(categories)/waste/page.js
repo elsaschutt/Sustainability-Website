@@ -1,7 +1,7 @@
 import CategoryPageLayout from '@/components/shared/CategoryPageLayout'
 
 export const metadata = {
-  title: 'Waste Reduction - Sustainable Living',
+  title: 'Waste Reduction | The Green Swap',
   description: 'Services and solutions to reduce food waste and manage resources responsibly',
 }
 

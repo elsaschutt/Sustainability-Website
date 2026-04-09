@@ -1,7 +1,7 @@
 import CategoryPageLayout from '@/components/shared/CategoryPageLayout'
 
 export const metadata = {
-  title: 'Furniture - Sustainable Living',
+  title: 'Furniture | The Green Swap',
   description: 'Eco-friendly furniture made from upcycled and sustainable materials',
 }
 

@@ -1,7 +1,7 @@
 import CategoryPageLayout from '@/components/shared/CategoryPageLayout'
 
 export const metadata = {
-  title: 'Garden - Sustainable Living',
+  title: 'Garden | The Green Swap',
   description: 'Indoor and outdoor gardening solutions for sustainable living',
 }
 

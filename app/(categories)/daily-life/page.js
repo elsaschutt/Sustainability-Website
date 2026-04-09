@@ -1,7 +1,7 @@
 import CategoryPageLayout from '@/components/shared/CategoryPageLayout'
 
 export const metadata = {
-  title: 'Daily Life - Sustainable Living',
+  title: 'Daily Life | The Green Swap',
   description: 'Sustainable products for everyday living',
 }
 

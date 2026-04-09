@@ -1,7 +1,7 @@
 import CategoryPageLayout from '@/components/shared/CategoryPageLayout'
 
 export const metadata = {
-  title: 'Kitchen - Sustainable Living',
+  title: 'Kitchen | The Green Swap',
   description: 'Sustainable solutions for your kitchen—from reusable paper towels to plastic-free cleaning supplies',
 }
 

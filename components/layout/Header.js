@@ -10,6 +10,7 @@ export default function Header() {
           <nav className="primary-nav">
             <ul>
               <ShopMegaMenu />
+              <li><Link href="/scorecard">Scorecard</Link></li>
               <li><Link href="/resources">Resources</Link></li>
               <li><Link href="/about">About</Link></li>
             </ul>

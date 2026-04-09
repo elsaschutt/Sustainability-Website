@@ -1,7 +1,7 @@
 import CategoryPageLayout from '@/components/shared/CategoryPageLayout'
 
 export const metadata = {
-  title: 'Clothing - Sustainable Living',
+  title: 'Clothing | The Green Swap',
   description: 'Sustainable, ethical, and upcycled fashion brands committed to reducing waste',
 }
 

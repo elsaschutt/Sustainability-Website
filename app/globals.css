@@ -66,13 +66,13 @@ h1, h2, h3, h4, h5, h6,
   font-weight: 700 !important;
 }
 
-/* Shop mega menu items — header green on all pages */
+/* Shop mega menu items — dark forest green on all pages */
 .shop-mega-item,
 .shop-menu-trigger {
-  color: #4A7C59 !important;
+  color: #2D3B2D !important;
 }
 
 .shop-mega-item:hover,
 .shop-mega-item:focus {
-  color: #2D3B2D !important;
+  color: #1a241a !important;
 }

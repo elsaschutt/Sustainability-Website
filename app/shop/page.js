@@ -5,7 +5,7 @@ import Footer from '@/components/layout/Footer'
 import CategoryCard from '@/components/shared/CategoryCard'
 
 export const metadata = {
-  title: 'Shop | Sustainable Living',
+  title: 'Shop | The Green Swap',
   description: 'Discover curated eco-friendly products for every room in your home',
 }
 

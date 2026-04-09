@@ -4,7 +4,7 @@ import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 
 export const metadata = {
-  title: 'About | Sustainable Living',
+  title: 'About | The Green Swap',
   description: 'Building a community dedicated to sustainable living and conscious consumption',
 }
 

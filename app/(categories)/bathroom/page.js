@@ -1,7 +1,7 @@
 import CategoryPageLayout from '@/components/shared/CategoryPageLayout'
 
 export const metadata = {
-  title: 'Bathroom - Sustainable Living',
+  title: 'Bathroom | The Green Swap',
   description: 'Zero-waste bathroom essentials and sustainable personal care products',
 }
 
