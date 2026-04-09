@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function ProductCard({ name, url, imageUrl, imageAlt, certifications, description, products, startingPrice, tier }) {
   return (
     <a
@@ -8,7 +10,15 @@ export default function ProductCard({ name, url, imageUrl, imageAlt, certificati
     >
       <div className="product-card-image">
         {imageUrl ? (
-          <img src={imageUrl} alt={imageAlt || name} />
+          <Image
+            src={imageUrl}
+            alt={imageAlt || name}
+            width={400}
+            height={400}
+            sizes="(max-width: 480px) 100vw, (max-width: 968px) 50vw, 25vw"
+            loading="lazy"
+            style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+          />
         ) : (
           <div className="product-card-placeholder">
             <span>{name[0]}</span>
