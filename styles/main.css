@@ -89,9 +89,14 @@ body {
   transform: none;
 }
 
-.primary-nav {
+.primary-nav.nav-left {
   grid-column: 1;
   justify-self: start;
+}
+
+.primary-nav.nav-right {
+  grid-column: 3;
+  justify-self: end;
 }
 
 .primary-nav ul {
