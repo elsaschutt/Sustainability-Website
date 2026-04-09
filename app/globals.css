@@ -54,12 +54,24 @@ p, span, li, label {
   font-size: 18px;
 }
 
-/* Titles and headers: Milker */
+/* Titles and headers: Urbanist Light 300 */
 h1, h2, h3, h4, h5, h6,
 .logo, .footer-logo,
 .hero-title-link,
 .page-header h1,
 .earth-hero h1,
 .navy-hero h1 {
-  font-family: 'Milker', 'Playfair Display', Georgia, serif !important;
+  font-family: var(--font-urbanist), 'Urbanist', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-weight: 300 !important;
+}
+
+/* Shop mega menu items — forest green on all pages */
+.shop-mega-item,
+.shop-menu-trigger {
+  color: var(--earth-bg, #2D3B2D) !important;
+}
+
+.shop-mega-item:hover,
+.shop-mega-item:focus {
+  color: var(--earth-accent, #8B9D77) !important;
 }

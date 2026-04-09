@@ -2,7 +2,7 @@
 
 :root {
   --font-primary: var(--font-manrope), 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-heading: 'Milker', 'Playfair Display', Georgia, serif;
+  --font-heading: var(--font-urbanist), 'Urbanist', -apple-system, BlinkMacSystemFont, sans-serif;
   --earth-bg: #2D3B2D;
   --earth-bg-light: #3A4D3A;
   --earth-cream: #F5F0E8;
