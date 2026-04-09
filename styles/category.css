@@ -1,7 +1,7 @@
 /* Category Pages Stylesheet */
 
 :root {
-  --font-category: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-category: var(--font-manrope), 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 body {

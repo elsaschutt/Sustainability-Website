@@ -36,14 +36,30 @@
   --color-gradient-pink-blue: linear-gradient(135deg, #8B9D77 0%, #2D3B2D 100%);
 }
 
+/* Body and non-heading text: Manrope 18px / 400 */
 body {
-  font-family: 'Milker', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: var(--font-manrope), 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Global font inheritance — Milker applies everywhere */
+p, a, span, li, button, input, textarea, select, label, div,
+nav, footer, main, section, article, aside {
+  font-family: var(--font-manrope), 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 400;
+}
+
+p, span, li, label {
+  font-size: 18px;
+}
+
+/* Titles and headers: Milker */
 h1, h2, h3, h4, h5, h6,
-p, a, span, li, button, input, textarea, select,
-nav, header, footer, main, section, article, aside {
-  font-family: 'Milker', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+.logo, .footer-logo,
+.hero-title-link,
+.page-header h1,
+.earth-hero h1,
+.navy-hero h1 {
+  font-family: 'Milker', 'Playfair Display', Georgia, serif !important;
 }

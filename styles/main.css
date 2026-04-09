@@ -1,8 +1,8 @@
 /* Sustainable Living - Main Pages Stylesheet */
 
 :root {
-  --font-primary: var(--font-inter), 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-heading: var(--font-display), 'Playfair Display', Georgia, serif;
+  --font-primary: var(--font-manrope), 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Milker', 'Playfair Display', Georgia, serif;
   --earth-bg: #2D3B2D;
   --earth-bg-light: #3A4D3A;
   --earth-cream: #F5F0E8;
