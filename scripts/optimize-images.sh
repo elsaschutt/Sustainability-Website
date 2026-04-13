@@ -18,6 +18,12 @@
 
 set -e
 
+# Skip on non-macOS environments (e.g., Netlify Linux build)
+if ! command -v sips &> /dev/null; then
+  echo "⏭ sips not found (not macOS) — skipping image optimization."
+  exit 0
+fi
+
 IMAGE_DIR="public/images"
 MAX_BYTES=400000     # Skip anything already under ~400 KB
 MAX_DIMENSION=2000   # Longest side in pixels
