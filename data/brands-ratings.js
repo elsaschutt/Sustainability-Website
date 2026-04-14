@@ -1,5 +1,5 @@
 // Brand Sustainability Ratings Data
-// Based on Sustainability Scorecard V7 - 165 points total
+// Based on Sustainability Scorecard V10 - 160 points total
 // Add more brands by following the same structure
 
 export const brands = [
@@ -535,6 +535,162 @@ export const brands = [
     },
     description: "Plant-based cleaning and personal care products focused on ingredient safety."
   }
+,
+  // ====================================================================
+  // V10 SCORED BRANDS (Enterprise V10 Scorecard - 160 pts max)
+  // Added from master_scorecards.xlsx
+  // ====================================================================
+  {
+    id: "dr-bronners",
+    name: "Dr. Bronner's",
+    category: "home",
+    product_type: "consumable",
+    total_score: 129,
+    tier: 2,
+    certifications: ["b_corp", "fair_trade", "one_percent"],
+    category_scores: {
+      circular_economy: { total: 32, max: 30, criteria: { takeback: { score: 4, max: 8, notes: "100% PCR bottles, community take-back" }, repair: { score: 7, max: 7, notes: "Bar soap = plastic-free, liquid bottles 100% PCR recyclable" }, refill_reuse: { score: 6, max: 6, notes: "Concentrated castile soap = classic refill model" }, disassembly: { score: 5, max: 5, notes: "Full ingredient transparency via ROC, USDA Organic" }, recycled_content: { score: 2, max: 2, notes: "100% PCR plastic in all liquid bottles" }, packaging: { score: 2, max: 2, notes: "Bar soap paper-wrapped, liquid bottles 100% PCR" } } },
+      transparency: { total: 25, max: 35, criteria: { lca: { score: 5, max: 10, notes: "Third-party emissions breakdown, no formal ISO 14040" }, scope3: { score: 5, max: 10, notes: "S1+2 disclosed, S3 not publicly disclosed" }, annual_report: { score: 7, max: 7, notes: "All-One! Report published annually since 2015" }, supplier_list: { score: 4, max: 4, notes: "Tier 4 supply chain partners published across 6+ countries" }, third_party_verification: { score: 4, max: 4, notes: "ROC, Fair for Life, USDA Organic, Leaping Bunny, Living Wage" } } },
+      certifications: { total: 18, max: 18, criteria: { quality: { score: 8, max: 8, notes: "B Corp 206.9 (Diff 5 — highest ever globally)" }, volume: { score: 7, max: 7, notes: "7 verified certifications (5+ threshold)" }, diversity: { score: 3, max: 3, notes: "4 categories: Environmental, Social/Labor, Chemical/Safety, Material/Circular" } } },
+      climate_renewable: { total: 7, max: 27, criteria: { onsite_renewable: { score: 0, max: 7, notes: "Corporate offices 100% renewable, production not disclosed" }, climate_status: { score: 2, max: 10, notes: "100% renewable electricity since 2018, EPA Green Power Partner" }, emissions_reduction: { score: 4, max: 6, notes: "Documented YoY reduction via All-One! Report" }, renewable_procurement: { score: 1, max: 4, notes: "100% renewable electricity via mix" } } },
+      business_model: { total: 20, max: 20, criteria: { anti_consumption: { score: 7, max: 7, notes: "18-in-1 concentrated castile soap, anti-consumption DNA" }, durability: { score: 5, max: 5, notes: "Concentrated castile = lowest-impact longest-lasting format" }, company_wide: { score: 4, max: 4, notes: "100% of product line is organic/fair trade/sustainable" }, slow_production: { score: 2, max: 2, notes: "Classic stable range since 1948" }, resale: { score: 2, max: 2, notes: "Circular supply chain via Serendipol/Serendipalm" } } },
+      social: { total: 12, max: 15, criteria: { living_wage: { score: 5, max: 5, notes: "Certified Living Wage Employer, $29.11/hr starting, 5-to-1 salary cap" }, factory_audits: { score: 4, max: 4, notes: "Fair for Life + ROC third-party audits" }, worker_safety: { score: 0, max: 3, notes: "No ISO 45001" }, supply_chain_transparency: { score: 3, max: 3, notes: "Tier 4 supplier transparency — industry leading" } } },
+      impact_claims: { total: 10, max: 10, criteria: { quantified_claims: { score: 4, max: 4, notes: "116,681 organic acres, 35,986 ROC acres, 525K kg CO2e" }, material_transparency: { score: 3, max: 3, notes: "Full material composition across product line" }, no_greenwashing: { score: 3, max: 3, notes: "All claims tied to third-party certs" } } },
+      regenerative: { total: 5, max: 5, criteria: { ecosystem_restoration: { score: 3, max: 3, notes: "Fair Trade premiums to 18,000 farmers, ROC soil health" }, zero_waste_water: { score: 2, max: 2, notes: "Climate-positive via regenerative organic farming" } } }
+    },
+    key_findings: {
+      strengths: ["B Corp 206.9 — highest score ever globally", "5-to-1 salary cap with $29.11/hr starting wage", "7 verified certifications spanning 4 categories", "Tier 4 supply chain transparency across 6+ countries", "100% renewable electricity since 2018"],
+      weaknesses: ["Scope 3 emissions not publicly disclosed", "No formal ISO 14040 LCA", "No SBTi validated pathway"],
+      certifications: ["B Corp 206.9", "Regenerative Organic Certified", "Fair for Life", "USDA Organic", "Leaping Bunny", "Living Wage Certified", "EPA Green Power Partner"]
+    },
+    description: "Family-owned castile soap company with the highest B Corp score ever. Known for fair trade supply chains, 5-to-1 salary cap, and regenerative organic practices."
+  },
+  {
+    id: "who-gives-a-crap",
+    name: "Who Gives A Crap",
+    category: "home",
+    product_type: "consumable",
+    total_score: 106,
+    tier: 3,
+    certifications: ["b_corp", "fsc", "carbon_neutral"],
+    category_scores: {
+      circular_economy: { total: 30, max: 30, criteria: { takeback: { score: 8, max: 8, notes: "100% recycled/FSC bamboo/bagasse — all compostable/biodegradable" }, repair: { score: 7, max: 7, notes: "Plastic-free paper wrappers, zero plastic per order" }, refill_reuse: { score: 6, max: 6, notes: "Subscription bulk-refill model (24-48 rolls)" }, disassembly: { score: 5, max: 5, notes: "Full material transparency, multi-certification" }, recycled_content: { score: 2, max: 2, notes: "100% recycled or 100% FSC-certified bamboo" }, packaging: { score: 2, max: 2, notes: "Fully plastic-free packaging" } } },
+      transparency: { total: 21, max: 35, criteria: { lca: { score: 5, max: 10, notes: "Third-party LCA: 70,605 tCO2e in 2022" }, scope3: { score: 5, max: 10, notes: "Shipping carbon neutral, full S3 not itemized" }, annual_report: { score: 7, max: 7, notes: "B Corp Impact Report 2024 with quantified metrics" }, supplier_list: { score: 0, max: 4, notes: "No public supplier list" }, third_party_verification: { score: 4, max: 4, notes: "B Corp 108.9, FSC Chain-of-Custody, third-party LCA" } } },
+      certifications: { total: 14, max: 18, criteria: { quality: { score: 8, max: 8, notes: "B Corp 108.9 (Diff 5)" }, volume: { score: 4, max: 7, notes: "3 verified certifications" }, diversity: { score: 2, max: 3, notes: "2 categories: Environmental, Material/Circular" } } },
+      climate_renewable: { total: 6, max: 27, criteria: { onsite_renewable: { score: 0, max: 7, notes: "No on-site renewable" }, climate_status: { score: 2, max: 10, notes: "Carbon-neutral shipping via verified offsets since 2020" }, emissions_reduction: { score: 3, max: 6, notes: "Documented YoY reduction via B Corp report" }, renewable_procurement: { score: 1, max: 4, notes: "Some renewable via offset programs" } } },
+      business_model: { total: 20, max: 20, criteria: { anti_consumption: { score: 7, max: 7, notes: "50% profits to water/sanitation ($20M+ AUD)" }, durability: { score: 5, max: 5, notes: "Recycled paper and bamboo with documented supply chain" }, company_wide: { score: 4, max: 4, notes: "100% of products are sustainable" }, slow_production: { score: 2, max: 2, notes: "Stable range since 2013" }, resale: { score: 2, max: 2, notes: "Subscription refill model" } } },
+      social: { total: 4, max: 15, criteria: { living_wage: { score: 0, max: 5, notes: "No living wage cert for manufacturing partners" }, factory_audits: { score: 4, max: 4, notes: "Third-party factory audits confirmed for China partners" }, worker_safety: { score: 0, max: 3, notes: "No ISO 45001" }, supply_chain_transparency: { score: 0, max: 3, notes: "FSC Chain-of-Custody but no tier 2+ visibility" } } },
+      impact_claims: { total: 8, max: 10, criteria: { quantified_claims: { score: 4, max: 4, notes: "70,605 tCO2e, £9.8M donated, 845K people impacted" }, material_transparency: { score: 3, max: 3, notes: "100% recycled OR 100% FSC bamboo disclosed" }, no_greenwashing: { score: 1, max: 3, notes: "Some past packaging greenwashing allegations" } } },
+      regenerative: { total: 3, max: 5, criteria: { ecosystem_restoration: { score: 3, max: 3, notes: "$20M+ AUD to WASH programs, 845K people with water access" }, zero_waste_water: { score: 0, max: 2, notes: "No operational water positive program" } } }
+    },
+    key_findings: {
+      strengths: ["50% of profits donated to water/sanitation ($20M+ AUD)", "B Corp 108.9 with FSC Chain-of-Custody", "Perfect circular economy score — plastic-free, recycled, subscription refill"],
+      weaknesses: ["No Scope 3 formally disclosed", "No on-site renewable energy", "No public supplier list or living wage cert"],
+      certifications: ["B Corp 108.9", "FSC Chain-of-Custody", "Carbon Neutral shipping"]
+    },
+    description: "Toilet paper company donating 50% of profits to build toilets and improve sanitation worldwide. 100% recycled or bamboo products with plastic-free packaging."
+  },
+  {
+    id: "ecos",
+    name: "ECOS",
+    category: "home",
+    product_type: "consumable",
+    total_score: 108,
+    tier: 3,
+    certifications: ["carbon_neutral", "epa_safer_choice"],
+    category_scores: {
+      circular_economy: { total: 28, max: 30, criteria: { takeback: { score: 4, max: 8, notes: "TRUE Platinum Zero Waste at manufacturing" }, repair: { score: 6, max: 7, notes: "EPA Safer Choice, plant-based, biodegradable" }, refill_reuse: { score: 4, max: 6, notes: "Concentrated formulas, some refill pouches" }, disassembly: { score: 5, max: 5, notes: "Full ingredient transparency via EPA Safer Choice" }, recycled_content: { score: 2, max: 2, notes: "PCR plastic packaging" }, packaging: { score: 1, max: 2, notes: "Plastic-free laundry packs; most still plastic" } } },
+      transparency: { total: 16, max: 35, criteria: { lca: { score: 3, max: 10, notes: "No formal ISO 14040 LCA" }, scope3: { score: 5, max: 10, notes: "S1+2 fully reported, S3 NOT disclosed" }, annual_report: { score: 4, max: 7, notes: "Impact data on website, not formal report" }, supplier_list: { score: 0, max: 4, notes: "No public supplier list" }, third_party_verification: { score: 4, max: 4, notes: "TRUE Platinum, EPA Safer Choice, carbon neutral" } } },
+      certifications: { total: 13, max: 18, criteria: { quality: { score: 6, max: 8, notes: "Carbon Neutral (Diff 4)" }, volume: { score: 5, max: 7, notes: "4 verified certifications" }, diversity: { score: 2, max: 3, notes: "2 categories: Environmental, Chemical/Safety" } } },
+      climate_renewable: { total: 21, max: 27, criteria: { onsite_renewable: { score: 7, max: 7, notes: "100% renewable energy at all facilities" }, climate_status: { score: 8, max: 10, notes: "Climate positive — offsets 110% of impacts" }, emissions_reduction: { score: 4, max: 6, notes: "28M+ lbs CO2 offset annually" }, renewable_procurement: { score: 2, max: 4, notes: "100% at facilities" } } },
+      business_model: { total: 16, max: 20, criteria: { anti_consumption: { score: 4, max: 7, notes: "Plant-powered mission, concentrated formulas" }, durability: { score: 5, max: 5, notes: "8x concentrated laundry" }, company_wide: { score: 4, max: 4, notes: "100% of products are sustainable" }, slow_production: { score: 2, max: 2, notes: "Stable range" }, resale: { score: 1, max: 2, notes: "Some refill formats" } } },
+      social: { total: 2, max: 15, criteria: { living_wage: { score: 0, max: 5, notes: "No living wage cert" }, factory_audits: { score: 2, max: 4, notes: "Internal quality controls" }, worker_safety: { score: 0, max: 3, notes: "No ISO 45001" }, supply_chain_transparency: { score: 0, max: 3, notes: "No tier 2+ transparency" } } },
+      impact_claims: { total: 7, max: 10, criteria: { quantified_claims: { score: 4, max: 4, notes: "28M+ lbs CO2, 14M+ gallons water restored, 99% waste diverted" }, material_transparency: { score: 3, max: 3, notes: "EPA Safer Choice + plant-based disclosure" }, no_greenwashing: { score: 0, max: 3, notes: "2015 $925K + 2022 ongoing class action for non-toxic claims" } } },
+      regenerative: { total: 5, max: 5, criteria: { ecosystem_restoration: { score: 3, max: 3, notes: "Water neutral: 14M+ gallons restored to endangered habitats" }, zero_waste_water: { score: 2, max: 2, notes: "TRUE Platinum Zero Waste + water neutral" } } }
+    },
+    key_findings: {
+      strengths: ["Climate positive (offsets 110%)", "Carbon neutral since 2013, water neutral since 2016", "TRUE Platinum Zero Waste (99%+ diverted)", "EPA Safer Choice Partner of Year 8x (120+ products)"],
+      weaknesses: ["2015 + 2022 class actions for non-toxic claims", "Scope 3 NOT disclosed", "No B Corp or living wage cert"],
+      certifications: ["Carbon Neutral", "TRUE Platinum Zero Waste", "EPA Safer Choice (8x Partner of Year)", "Water Neutral"]
+    },
+    description: "Family-owned since 1967. First company to achieve carbon neutral + water neutral + TRUE Platinum Zero Waste. Woman-owned and Black-owned with 60% female leadership."
+  },
+  {
+    id: "grove-collaborative",
+    name: "Grove Collaborative",
+    category: "home",
+    product_type: "consumable",
+    total_score: 116,
+    tier: 2,
+    certifications: ["b_corp", "climate_neutral", "sbti"],
+    category_scores: {
+      circular_economy: { total: 26, max: 30, criteria: { takeback: { score: 6, max: 8, notes: "Plastic Neutral — 17.2M+ lbs recovered" }, repair: { score: 4, max: 7, notes: "Biodegradable products curated" }, refill_reuse: { score: 4, max: 6, notes: "Promotes refill and concentrate formats" }, disassembly: { score: 5, max: 5, notes: "Feel Good Standard vets every product" }, recycled_content: { score: 1, max: 2, notes: "Partial across marketplace" }, packaging: { score: 1, max: 2, notes: "Working toward plastic-free" } } },
+      transparency: { total: 28, max: 35, criteria: { lca: { score: 5, max: 10, notes: "Partial LCA in sustainability reports" }, scope3: { score: 10, max: 10, notes: "Full Scope 1+2+3 since 2020" }, annual_report: { score: 7, max: 7, notes: "6 annual sustainability reports" }, supplier_list: { score: 2, max: 4, notes: "CA Supply Chain Act disclosures" }, third_party_verification: { score: 4, max: 4, notes: "B Corp, Climate Neutral, SBTi, plastic verification" } } },
+      certifications: { total: 17, max: 18, criteria: { quality: { score: 8, max: 8, notes: "B Corp 100.9 (Diff 5)" }, volume: { score: 7, max: 7, notes: "8 verified certifications (5+ threshold)" }, diversity: { score: 2, max: 3, notes: "3 categories: Environmental, Chemical/Safety, Material/Circular" } } },
+      climate_renewable: { total: 13, max: 27, criteria: { onsite_renewable: { score: 0, max: 7, notes: "No on-site (DTC model)" }, climate_status: { score: 6, max: 10, notes: "Climate Neutral Scope 1+2+3" }, emissions_reduction: { score: 6, max: 6, notes: "SBTi Science-Based Targets approved 2025" }, renewable_procurement: { score: 1, max: 4, notes: "Partial via RECs" } } },
+      business_model: { total: 17, max: 20, criteria: { anti_consumption: { score: 5, max: 7, notes: "Beyond Plastic mission, 100% plastic-free goal" }, durability: { score: 4, max: 5, notes: "Curates refill/concentrate products" }, company_wide: { score: 4, max: 4, notes: "Entire platform sustainability-screened" }, slow_production: { score: 2, max: 2, notes: "Stable marketplace" }, resale: { score: 2, max: 2, notes: "Plastic Neutral + refill model" } } },
+      social: { total: 4, max: 15, criteria: { living_wage: { score: 0, max: 5, notes: "No living wage cert" }, factory_audits: { score: 3, max: 4, notes: "Third-party semi-announced audits" }, worker_safety: { score: 0, max: 3, notes: "No ISO 45001" }, supply_chain_transparency: { score: 1, max: 3, notes: "CA Supply Chain Act" } } },
+      impact_claims: { total: 7, max: 10, criteria: { quantified_claims: { score: 4, max: 4, notes: "17.2M+ lbs plastic recovered, SBTi validated, B Corp 100.9" }, material_transparency: { score: 2, max: 3, notes: "Feel Good Standard" }, no_greenwashing: { score: 1, max: 3, notes: "Some ingredient transparency concerns" } } },
+      regenerative: { total: 4, max: 5, criteria: { ecosystem_restoration: { score: 3, max: 3, notes: "Plastic Neutral: 17.2M+ lbs recovered" }, zero_waste_water: { score: 1, max: 2, notes: "Working toward plastic-free" } } }
+    },
+    key_findings: {
+      strengths: ["B Corp 100.9 + SBTi validated + Climate Neutral + Plastic Neutral", "Full Scope 1+2+3 since 2020 — 6 annual reports", "First plastic neutral retailer (17.2M+ lbs recovered)"],
+      weaknesses: ["No on-site renewable energy", "No living wage certification", "Some ingredient transparency concerns"],
+      certifications: ["B Corp 100.9", "Climate Neutral", "Plastic Neutral", "SBTi Validated", "EPA Safer Choice", "EWG Verified", "Leaping Bunny", "FSC"]
+    },
+    description: "Public benefit corporation (NYSE: GROV) and first plastic neutral retailer. Curates sustainable home products with 8 verified certifications."
+  },
+  {
+    id: "method",
+    name: "Method",
+    category: "home",
+    product_type: "consumable",
+    total_score: 87,
+    tier: 3,
+    certifications: ["epa_safer_choice"],
+    category_scores: {
+      circular_economy: { total: 26, max: 30, criteria: { takeback: { score: 6, max: 8, notes: "Some biodegradable via EPA Safer Choice" }, repair: { score: 6, max: 7, notes: "100% PCR/ocean-recovered plastic bottles" }, refill_reuse: { score: 6, max: 6, notes: "Refill pouches save ~80% water/energy/plastic" }, disassembly: { score: 5, max: 5, notes: "EPA Safer Choice ingredient transparency" }, recycled_content: { score: 2, max: 2, notes: "100% PCR laundry, 25-50% PCR HDPE" }, packaging: { score: 1, max: 2, notes: "Reduced plastic, not zero" } } },
+      transparency: { total: 13, max: 35, criteria: { lca: { score: 0, max: 10, notes: "No formal LCA" }, scope3: { score: 3, max: 10, notes: "SC Johnson S1+2 only, Method S3 not disclosed" }, annual_report: { score: 5, max: 7, notes: "SC Johnson Better World Report (partial)" }, supplier_list: { score: 0, max: 4, notes: "No public supplier list" }, third_party_verification: { score: 4, max: 4, notes: "EPA Safer Choice, LEED Platinum" } } },
+      certifications: { total: 13, max: 18, criteria: { quality: { score: 8, max: 8, notes: "LEED Platinum factory (Diff 5)" }, volume: { score: 3, max: 7, notes: "2 certifications" }, diversity: { score: 2, max: 3, notes: "2 categories: Environmental, Chemical/Safety" } } },
+      climate_renewable: { total: 16, max: 27, criteria: { onsite_renewable: { score: 7, max: 7, notes: "LEED Platinum Chicago: 100% on-site wind + solar" }, climate_status: { score: 3, max: 10, notes: "SC Johnson 71% GHG reduction (70-79% progress)" }, emissions_reduction: { score: 3, max: 6, notes: "SC Johnson documented YoY" }, renewable_procurement: { score: 1, max: 4, notes: "SC Johnson 45% renewable globally" } } },
+      business_model: { total: 8, max: 20, criteria: { anti_consumption: { score: 0, max: 7, notes: "Growth brand" }, durability: { score: 4, max: 5, notes: "Concentrated formulas" }, company_wide: { score: 0, max: 4, notes: "One brand in SC Johnson's portfolio" }, slow_production: { score: 2, max: 2, notes: "Stable range" }, resale: { score: 2, max: 2, notes: "Refill + Plastic Bank" } } },
+      social: { total: 2, max: 15, criteria: { living_wage: { score: 0, max: 5, notes: "No living wage cert" }, factory_audits: { score: 2, max: 4, notes: "SC Johnson supplier code" }, worker_safety: { score: 0, max: 3, notes: "No ISO 45001" }, supply_chain_transparency: { score: 0, max: 3, notes: "No tier 2+ visibility" } } },
+      impact_claims: { total: 5, max: 10, criteria: { quantified_claims: { score: 2, max: 4, notes: "SC Johnson claims, Method-specific limited" }, material_transparency: { score: 3, max: 3, notes: "EPA Safer Choice disclosure" }, no_greenwashing: { score: 0, max: 3, notes: "$2.25M settlement for false non-toxic labeling" } } },
+      regenerative: { total: 4, max: 5, criteria: { ecosystem_restoration: { score: 2, max: 3, notes: "Plastic Bank (550+ collection locations)" }, zero_waste_water: { score: 2, max: 2, notes: "SC Johnson 93% zero waste to landfill" } } }
+    },
+    key_findings: {
+      strengths: ["LEED Platinum factory with 100% on-site renewable", "100% PCR plastic + ocean-recovered plastic via Plastic Bank", "Refill pouches save ~80% resources"],
+      weaknesses: ["DROPPED B Corp (Feb 2024)", "$2.25M class action for false non-toxic labeling", "Not company-wide — one brand in SC Johnson portfolio"],
+      certifications: ["LEED Platinum (factory)", "EPA Safer Choice"]
+    },
+    description: "Design-forward cleaning brand owned by SC Johnson. LEED Platinum factory with on-site wind and solar. Dropped B Corp certification in 2024."
+  },
+  {
+    id: "urban-outfitters",
+    name: "Urban Outfitters",
+    category: "clothing",
+    product_type: "durable",
+    total_score: 29,
+    tier: 5,
+    certifications: [],
+    category_scores: {
+      circular_economy: { total: 11, max: 30, criteria: { takeback: { score: 3, max: 8, notes: "Nuuly Thrift + Vintage & ReMADE (6M+ garments)" }, repair: { score: 3, max: 7, notes: "Nuuly repairs 250K+ garments/yr" }, refill_reuse: { score: 4, max: 6, notes: "Nuuly clothing rental" }, disassembly: { score: 0, max: 5, notes: "Fast fashion model" }, recycled_content: { score: 0, max: 2, notes: "Only ~10% responsibly sourced" }, packaging: { score: 1, max: 2, notes: "Polybag recycling via Trex (570K+)" } } },
+      transparency: { total: 4, max: 35, criteria: { lca: { score: 0, max: 10, notes: "No LCA" }, scope3: { score: 0, max: 10, notes: "Not disclosed" }, annual_report: { score: 3, max: 7, notes: "2023-24 Impact Report but lacks YoY data" }, supplier_list: { score: 0, max: 4, notes: "104 suppliers referenced but not published" }, third_party_verification: { score: 1, max: 4, notes: "Internal audits only" } } },
+      certifications: { total: 0, max: 18, criteria: { quality: { score: 0, max: 8, notes: "Zero certifications" }, volume: { score: 0, max: 7, notes: "Zero" }, diversity: { score: 0, max: 3, notes: "Zero" } } },
+      climate_renewable: { total: 5, max: 27, criteria: { onsite_renewable: { score: 3, max: 7, notes: "DC solar array: 13,450 panels, 4.1 MW" }, climate_status: { score: 0, max: 10, notes: "No carbon neutrality" }, emissions_reduction: { score: 1, max: 6, notes: "Solar + polybag recycling, no formal program" }, renewable_procurement: { score: 1, max: 4, notes: "Partial via on-site solar" } } },
+      business_model: { total: 4, max: 20, criteria: { anti_consumption: { score: 0, max: 7, notes: "Fast fashion model" }, durability: { score: 0, max: 5, notes: "Not built to last" }, company_wide: { score: 2, max: 4, notes: "Nuuly is circular but primary business is fast fashion" }, slow_production: { score: 0, max: 2, notes: "Frequent trend-driven collections" }, resale: { score: 2, max: 2, notes: "Nuuly Thrift + Vintage & ReMADE" } } },
+      social: { total: 1, max: 15, criteria: { living_wage: { score: 0, max: 5, notes: "No living wage evidence" }, factory_audits: { score: 1, max: 4, notes: "Internal audits only" }, worker_safety: { score: 0, max: 3, notes: "No ISO 45001" }, supply_chain_transparency: { score: 0, max: 3, notes: "Supplier list not disclosed" } } },
+      impact_claims: { total: 2, max: 10, criteria: { quantified_claims: { score: 2, max: 4, notes: "6M garments recirculated, 4.1MW solar" }, material_transparency: { score: 0, max: 3, notes: "No aggregate breakdown" }, no_greenwashing: { score: 0, max: 3, notes: "$5M wage theft settlement, LA sweatshop labor" } } },
+      regenerative: { total: 2, max: 5, criteria: { ecosystem_restoration: { score: 2, max: 3, notes: "Nuuly Thrift 1% to Stripe Climate" }, zero_waste_water: { score: 0, max: 2, notes: "No program" } } }
+    },
+    key_findings: {
+      strengths: ["Nuuly rental/resale ecosystem (6M+ garments recirculated)", "Distribution center solar: 13,450 panels, 4.1 MW", "Polybag recycling via Trex (570K+ diverted)"],
+      weaknesses: ["Zero certifications of any kind", "$5M wage theft settlement + LA sweatshop labor", "No Scope 3, no supplier list, no living wage"],
+      certifications: []
+    },
+    description: "Multi-brand retailer (NASDAQ: URBN) including Urban Outfitters, Free People, Anthropologie, and Nuuly. Good On You rates 'Not Good Enough' on both Planet and People."
+  },
+
 ];
 
 // Detailed criteria structure matching V7 scorecard
@@ -566,7 +722,7 @@ export const scorecardCriteria = {
   },
   certifications: {
     name: "Third-Party Certifications",
-    max: 25,
+    max: 18,
     priority: 3,
     tiers: [
       { id: "elite", name: "ELITE", examples: "EcoVadis Platinum, B Corp 100+, C2C Platinum", points: 7 },
@@ -579,7 +735,7 @@ export const scorecardCriteria = {
   },
   climate_renewable: {
     name: "Climate & Renewable Energy",
-    max: 25,
+    max: 27,
     priority: 4,
     sections: [
       {
@@ -680,7 +836,15 @@ export const certificationLabels = {
   ecovadis_gold: "EcoVadis Gold",
   ecovadis_platinum: "EcoVadis Platinum",
   climate_neutral: "Climate Neutral",
-  sbti: "SBTi Validated"
+  sbti: "SBTi Validated",
+  leed_platinum: "LEED Platinum",
+  leaping_bunny: "Leaping Bunny",
+  true_zero_waste: "TRUE Zero Waste",
+  ewg_verified: "EWG Verified",
+  plastic_neutral: "Plastic Neutral",
+  roc: "Regenerative Organic",
+  living_wage: "Living Wage Certified",
+  water_neutral: "Water Neutral"
 };
 
 // Category labels for display
@@ -689,7 +853,9 @@ export const categoryLabels = {
   home: "Home & Cleaning",
   bathroom: "Bathroom & Personal Care",
   kitchen: "Kitchen",
-  bedroom: "Bedroom & Textiles"
+  bedroom: "Bedroom & Textiles",
+  pet_care: "Pet Care",
+  accessories: "Accessories & Misc"
 };
 
 // Product type labels
@@ -764,9 +930,9 @@ export function getAllCertifications() {
 
 // Helper function to calculate tier from score
 export function getTierFromScore(score) {
-  if (score >= 145) return 1;
-  if (score >= 115) return 2;
-  if (score >= 85) return 3;
-  if (score >= 55) return 4;
+  if (score >= 140) return 1;
+  if (score >= 112) return 2;
+  if (score >= 83) return 3;
+  if (score >= 54) return 4;
   return 5;
 }
