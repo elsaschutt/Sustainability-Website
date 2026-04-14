@@ -8,7 +8,7 @@ export const brands = [
     name: "Patagonia",
     category: "clothing",
     product_type: "durable",
-    total_score: 128,
+    total_score: 125,
     tier: 2,
     certifications: ["b_corp", "fair_trade", "one_percent"],
     category_scores: {
@@ -115,7 +115,7 @@ export const brands = [
     name: "Blueland",
     category: "home",
     product_type: "consumable",
-    total_score: 136,
+    total_score: 113,
     tier: 2,
     certifications: ["b_corp", "carbon_neutral", "epa_safer_choice"],
     category_scores: {
@@ -434,7 +434,7 @@ export const brands = [
     name: "Seventh Generation",
     category: "home",
     product_type: "consumable",
-    total_score: 92,
+    total_score: 87,
     tier: 3,
     certifications: ["b_corp", "usda_biobased"],
     category_scores: {
